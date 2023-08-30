@@ -1,0 +1,10 @@
+public class SumOfIntegers {
+    public static void main(String[] args) {
+        int sum = 0; //creates an int named sum and gives it the value 0
+        for (int i = 1; i <= 5; i++) //creates an int "i", gives it a starting value of 1. Then creates a for loop which increases the value of i untill its 5
+        {
+            sum += i; //adds the value assigned to i to sum
+        }
+        System.out.println("Sum of the first 5 positive integers: " + sum); //prints the sentence "sum of the first 5 positive integers" and the sum we calculated in the for loop
+    }
+}

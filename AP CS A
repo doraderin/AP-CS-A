@@ -1,0 +1,10 @@
+public class LastDigit {
+    public static void main(String[] args) {
+
+        int number = System.out.print("Enter a number: ");
+        int lastDigit = number % 10;
+        
+        System.out.println("Last digit: " + lastDigit);
+
+    }
+}

@@ -1,0 +1,22 @@
+import Java.util.Scanner;
+
+public class distance_xy {
+    public static void main(string[]args){
+        Scanner scan = new Scanner(systemin);
+        int x1 = System.out.println("enter first x: ")
+        int S1 = scan.nextln();
+        int y1 = System.out.println("enter first y: ")
+        int S2 = scan.nextln();
+        int x2 = System.out.println("enter second x: ")
+        int S3 = scan.nextln();
+        int y2 = System.out.println("enter second y: ")
+
+        double distX = x2 - x1;
+        double distY = y2 - y1;
+
+        System.out.print();
+
+        scanner.close();
+
+    }
+}

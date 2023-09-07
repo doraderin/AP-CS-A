@@ -1,7 +1,7 @@
 import Java.util.Scanner;
 
 public class distance_xy {
-    public static void main(string[]args){
+    public static void main(String[] args){
         Scanner scan = new Scanner(systemin);
         System.out.println("enter first x: ")
         int x1 = scan.nextln();

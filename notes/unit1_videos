@@ -1,0 +1,21 @@
+https://apclassroom.collegeboard.org/8/home?apd=jccqx3doxb&unitId=1
+
+error cases
+x = 7; legal
+7 = x; not legal
+trying to /0 will result in ArithmeticException
+
+operator precedence
+1. () (left to right)
+2. * / % (left to right)
+3. = (right to left)
+
+keywords/primitives
+string literal = letters,nrs,symbols in ""
+keyword final can be used infront of variables so its value can never be changed (ex: final double PI = 3.14;)
+double */+- int     -> will result in double
+double can store 14-15 digits
+int = Integer.MAX_VALUE -> 2147483647
+      Integer.MIN_VALUE -> -2147483647
+
+      

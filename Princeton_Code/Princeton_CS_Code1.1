@@ -1,0 +1,26 @@
+//https://introcs.cs.princeton.edu/java/11hello/
+
+//1. print hello world ten times
+public class helloworld {
+    public static void main(String[] args) {   
+    for (int i = 1; i <= 10; i++){
+        System.out.println("Hello world");
+     }
+    }
+}
+
+//2. Takes 3 command-line arguments and prints them in reverse order in a friendly greeting.
+import java.util.Scanner;
+public class UseArgument {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("enter first name ");
+        String name1 = scan.nextLine();
+        System.out.print("enter second name ");
+        String name2 = scan.nextLine();
+        System.out.print("enter third name ");
+        String name3 = scan.nextLine();
+        System.out.print("Hello, "+name3+", "+name2+", "+name1);
+    }
+}
+

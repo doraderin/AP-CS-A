@@ -1,0 +1,34 @@
+//https://classroom.google.com/c/NjIwNDQ4OTA2ODg0/a/NjIxMDgwMTQxODc0/details
+
+
+//1. takes two integers x and y and prints the Euclidean distance from the point (x, y) to the origin (0, 0).
+import java.util.Scanner;
+public class Distance {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("enter x: ");
+        int x = scan.nextInt();
+        System.out.print("enter y: ");
+        int y = scan.nextInt();
+        
+        int product = x*x + y*y;
+        int distance = (int) java.lang.Math.sqrt(product);
+        System.out.print(distance);
+    }
+}    
+
+//2. prints the sum of two random integers between 1 and 6 (such as you might get when rolling dice).
+import java.util.Random;
+public class DiceRoller {
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        int dice1 = random.nextInt(7);
+        int dice2 = random.nextInt(7);
+        int sum = dice1 + dice2;
+
+        System.out.println("dice 1: " + dice1);
+        System.out.println("dcie 2: " + dice2);
+        System.out.println("sum of the two dices: " + sum);
+    }
+}

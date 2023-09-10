@@ -56,3 +56,21 @@ public class SpringSeason {
     }
 }
 
+
+//4. takes two double command-line arguments t and v and prints the wind chill.
+
+import java.util.Scanner;
+public class WindChill {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in); 
+        System.out.print("enter temperature (F): ");
+        int t = scan.nextInt();
+        System.out.print("enter wind speed (miles/hour): ");
+        int v = scan.nextInt();
+        
+        double w = (35.74 + 0.6215*t + (0.4275*t - 35.75) * Math.pow(v, 0.16));
+        
+        System.out.print("the wind chill is "+w);
+    }
+}
+

@@ -1,7 +1,7 @@
 //https://classroom.google.com/c/NjIwNDQ4OTA2ODg0/a/NjIxMDgwMTQxODc0/details
 
 
-//1. takes two integers x and y and prints the Euclidean distance from the point (x, y) to the origin (0, 0).
+//18. takes two integers x and y and prints the Euclidean distance from the point (x, y) to the origin (0, 0).
 import java.util.Scanner;
 public class Distance {
     public static void main(String[] args){
@@ -17,7 +17,7 @@ public class Distance {
     }
 }    
 
-//2. prints the sum of two random integers between 1 and 6 (such as you might get when rolling dice).
+//20. prints the sum of two random integers between 1 and 6 (such as you might get when rolling dice).
 import java.util.Random;
 public class DiceRoller {
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class DiceRoller {
     }
 }
 
-//3. takes two int values m and d from the command line and prints true if day d of month m is between March 20 (m = 3, d =20) and June 20 (m = 6, d = 20), false otherwise.
+//23. takes two int values m and d from the command line and prints true if day d of month m is between March 20 (m = 3, d =20) and June 20 (m = 6, d = 20), false otherwise.
 import java.util.Scanner;
 
 public class SpringSeason {
@@ -57,7 +57,7 @@ public class SpringSeason {
 }
 
 
-//4. takes two double command-line arguments t and v and prints the wind chill.
+//25. takes two double command-line arguments t and v and prints the wind chill.
 
 import java.util.Scanner;
 public class WindChill {
@@ -71,6 +71,30 @@ public class WindChill {
         double w = (35.74 + 0.6215*t + (0.4275*t - 35.75) * Math.pow(v, 0.16));
         
         System.out.print("the wind chill is "+w);
+    }
+}
+
+//29. takes a date as input and prints the day of the week that date falls on.
+
+import java.util.Scanner;
+public class DayOfWeek {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in); 
+        System.out.print("enter month: ");
+        int m = scan.nextInt();
+        System.out.print("enter day: ");
+        int d = scan.nextInt();
+        System.out.print("enter year: ");
+        int y = scan.nextInt();
+        
+        int y0 = y - (14 - m) / 12;
+        int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
+        int m0 = m + 12 * ((14 - m) / 12) - 2;
+        int d0 = (d + x + 31 * m0 / 12) % 7;
+
+        System.out.println("day of the week: "+ d0);
+    
+       
     }
 }
 

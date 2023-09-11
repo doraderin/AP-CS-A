@@ -1,0 +1,118 @@
+
+//1. 
+public class Student {
+    private String name;
+    private int age;
+
+    public Student(String name, int age) {
+        System.out.print("name of student: "+name+" age of student: "+age);
+    }
+
+    public static void main(String[] args) {
+        Student alice = new Student("Alice", 18);
+    }
+}
+
+//2. 
+public class Book{
+    private String title;
+    private String author;
+    private int pageCount;
+
+    public Book(String title, String author, int pageCount){
+        System.out.print("name of book: "+title+" author of book: "+author+"page count of book: "+pageCount);
+    }
+
+    public static void main(String[] args) {
+        Book book = new Book("The Great Gatsby","F. Scott Fitzgerald", 250);
+    }
+}
+
+//3. 
+public class Circle{
+    private double radius;
+
+    public Circle(double radius){
+        System.out.print("radius of circle is "+radius);
+    }
+
+    public static void main(String[] args) {
+        Circle rad = new Circle(5.5);
+    }
+}
+
+//4. 
+public class Car{
+    private String make;
+    private String model;
+    private int year;
+
+    public Car(String make, String model, int year){
+        System.out.print("make of car is "+make+" model of car is "+model+" year of car is "+year);
+    }
+
+    public static void main(String[] args) {
+        Car carModel = new Car("Toyota","Camry",2022);
+    }
+}
+
+//5. 
+public class Employee{
+    private String name;
+    private int employeeId;
+
+    public Employee(String name, int employeeId){
+        System.out.print("name of employee is "+name+" ID of employee is "+employeeId);
+    }
+
+    public static void main(String[] args) {
+        Employee person = new Employee("John Smith",12345);
+    }
+}
+
+//6. 
+public class Song{
+    private String title;
+    private String artist;
+    private int durationInSeconds;
+
+    public Song(String title, String artist, int durationInSeconds){
+        System.out.print("title of song is "+title+" name of artist is "+artist+"the songs duration in seconds is "+durationInSeconds);
+    }
+
+    public static void main(String[] args) {
+        Song song1 = new Song("Shape of you","Ed Sheeran",235);
+    }
+}
+
+
+//7. 
+public class Rectangle{
+    double width;
+    double height;
+
+    public Rectangle(double width, double height){
+        System.out.print("width of rectangle is "+width+" height of retangle is "+height);
+    }
+
+    public static void main(String[] args) {
+        Rectangle shape = new Rectangle(10.0,7.5);
+    }
+}
+
+
+//8. 
+public class BankAccount{
+    String accountHolder;
+    double balance;
+
+    public BankAccount(String accountHolder, double balance){
+        System.out.print("the account holder is "+accountHolder+" the balance of account is "+balance);
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("dora",100);
+    }
+}
+
+

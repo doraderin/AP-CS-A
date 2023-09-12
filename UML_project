@@ -1,0 +1,46 @@
+public class Main {
+    public static void main(String[] args) {
+        class Dog {
+            private String name;
+            private String breed;
+            private int age;
+
+            public Dog(String n, String b, int a) {
+                this.name = n;
+                this.breed = b;
+                this.age = a;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public String getBreed() {
+                return breed;
+            }
+
+            public int getAge() {
+                return age;
+            }
+
+            public void setName(String n) {
+                this.name = n;
+            }
+
+            public void setBreed(String b) {
+                this.breed = b;
+            }
+
+            public void setAge(int a) {
+                this.age = a;
+            }
+
+            public String toString() {
+                return "Dog name is " + name + ", breed is " + breed + ", and age is " + age;
+            }
+        }
+
+        Dog dog1 = new Dog("Bob", "Labrador", 4);
+        System.out.print(dog1.toString());
+    }
+}

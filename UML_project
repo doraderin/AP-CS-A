@@ -131,3 +131,57 @@ public class Main {
     }
 }
 
+//4.
+public class Main {
+    public static void main(String[] args) {
+        class Rectangle {
+            private double length;
+            private double width;
+            private double angle;
+            private int sides;
+            private String name;
+
+            public Rectangle(double l, double w) {
+                this.length = l;
+                this.width = w;
+            }
+
+            public double getLenght() {
+                return length;
+            }
+
+            public double getWidth() {
+                return width;
+            }
+            
+             public double getArea() {
+                double area = width*length;
+                return area;
+            }
+            
+             public double getPerimeter() {
+                double perimeter = 2*(length+width);
+                return perimeter;
+            }
+
+            public void setLenght(double l) {
+                this.length = l;
+            }
+
+            public void setWidth(int w) {
+                this.width = w;
+            }
+
+            public String toString() {
+                double area = getArea();
+                double perimeter = getPerimeter();
+                return "rectangle's area is  " + area + ", and it's perimeter is "+ perimeter;
+               
+                
+            }
+        }
+
+        Rectangle shape1 = new Rectangle(5,6);
+        System.out.print(shape1.toString());
+    }
+}

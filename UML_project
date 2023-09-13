@@ -44,3 +44,90 @@ public class Main {
         System.out.print(dog1.toString());
     }
 }
+
+
+//2.
+public class Main {
+    public static void main(String[] args) {
+        class Pen {
+            private String color;
+            private boolean erasable;
+
+            public Pen(String c, boolean e) {
+                this.color = c;
+                this.erasable = e;
+            }
+
+            public String getColor() {
+                return color;
+            }
+
+            public boolean getErasable() {
+                return erasable;
+            }
+
+            public void setColor(String c) {
+                this.color = c;
+            }
+
+            public void setErasable(boolean e) {
+                this.erasable = e;
+            }
+
+            public String toString() {
+                if (erasable){
+                    return "pen's color is " + color + ", and it is erasable" ;
+                }
+                else{
+                    return "pen's color is " + color + ", and it is not erasable" ;
+                }
+                
+            }
+        }
+
+        Pen pen1 = new Pen("Blue", false);
+        System.out.print(pen1.toString());
+    }
+}
+
+
+//3.
+public class Main {
+    public static void main(String[] args) {
+        class Band {
+            private String artist;
+            private int year;
+
+            public Band(String a, int y) {
+                this.artist = a;
+                this.year = y;
+            }
+
+            public String getName() {
+                return artist;
+            }
+
+            public int getYear() {
+                return year;
+            }
+
+            public void setName(String a) {
+                this.artist = a;
+            }
+
+            public void setYear(int y) {
+                this.year = y;
+            }
+
+            public String toString() {
+                return "band's name is  " + artist + ", and it was created in the year "+year ;
+               
+                
+            }
+        }
+
+        Band band1 = new Band("Pink Floyd", 1964);
+        System.out.print(band1.toString());
+    }
+}
+

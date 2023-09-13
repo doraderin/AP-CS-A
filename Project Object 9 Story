@@ -1,0 +1,90 @@
+//1. Creating and Storing Objects (Instantiation)
+class MyClass {
+    int value;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass(); 
+        obj.value = 42; 
+        System.out.println(obj.value); 
+    }
+}
+
+//2. Creating a class with a void method
+class MyClass {
+    void sayHello() {
+        System.out.println("Hello, World!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.sayHello(); 
+    }
+}
+
+//3. Calling a Void Method with Parameters
+class MyClass {
+    void greet(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.greet("Alice"); 
+    }
+}
+
+//4. Calling a Non-void Method:
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        int result = calc.add(5, 3); 
+        System.out.println("Result: " + result);
+    }
+}
+
+//5. String Objects - Concatenation, Literals, and More
+public class Main {
+    public static void main(String[] args) {
+        String firstName = "John";
+        String lastName = "Doe";
+        String fullName = firstName + " " + lastName; 
+        System.out.println("Full Name: " + fullName);
+    }
+}
+
+//6. String Methods:
+public class Main {
+    public static void main(String[] args) {
+        String text = "Hello, World!";
+        int length = text.length(); 
+        String upperCase = text.toUpperCase(); 
+        System.out.println("Length: " + length);
+        System.out.println("Uppercase: " + upperCase);
+    }
+}
+
+//Using the Math Class
+public class Main {
+    public static void main(String[] args) {
+        double x = 5.0;
+        double y = 3.0;
+        
+        double max = Math.max(x, y); 
+        double sqrt = Math.sqrt(x); 
+        
+        System.out.println("Max: " + max);
+        System.out.println("Square Root: " + sqrt);
+    }
+}

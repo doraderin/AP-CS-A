@@ -1,64 +1,71 @@
-//1. Creating and Storing Objects (Instantiation)
-class MyClass {
-    int value;
-}
+//1. Creating and Storing Objects (Instantiation) (prints dog name+age for 2 dogs)
+public class Dog {
+    String name;
+    int age;
 
-public class Main {
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public static void main(String[] args) {
-        MyClass obj = new MyClass(); 
-        obj.value = 42; 
-        System.out.println(obj.value); 
+        Dog dog1 = new Dog("Bob", 3);
+        Dog dog2 = new Dog("Max", 2);
+
+        System.out.println(dog1.name + " is " + dog1.age + " years old.");
+        System.out.println(dog2.name + " is " + dog2.age + " years old.");
     }
 }
 
-//2. Creating a class with a void method
-class MyClass {
-    void sayHello() {
-        System.out.println("Hello, World!");
-    }
-}
 
-public class Main {
+//2. Creating a class with a void method (prints hello)
+public class MyClass {
+    public void sayHello() {
+        System.out.println("hello");
+    }
+
     public static void main(String[] args) {
-        MyClass obj = new MyClass();
-        obj.sayHello(); 
+        MyClass object = new MyClass();
+        object.sayHello();
     }
 }
 
-//3. Calling a Void Method with Parameters
-class MyClass {
-    void greet(String name) {
-        System.out.println("Hello, " + name + "!");
-    }
-}
 
-public class Main {
+//3. Calling a Void Method with Parameters (prints sum of 2 numbers, 8)
+public class Calculator {
+    public void add(int num1, int num2) {
+        int sum = num1 + num2;
+        System.out.println("sum: " + sum);
+    }
+
     public static void main(String[] args) {
-        MyClass obj = new MyClass();
-        obj.greet("Alice"); 
+        Calculator calculator = new Calculator();
+        calculator.add(5, 3); 
     }
 }
 
-//4. Calling a Non-void Method:
-class Calculator {
-    int add(int a, int b) {
-        return a + b;
-    }
-}
 
-public class Main {
+//4. Calling a Non-void Method (prints sum of 2 numbers, 8)
+public class Calculator {
+    public int add(int num1, int num2) {
+        int sum = num1 + num2;
+        return sum;
+    }
+
     public static void main(String[] args) {
-        Calculator calc = new Calculator();
-        int result = calc.add(5, 3); 
-        System.out.println("Result: " + result);
+        Calculator calculator = new Calculator();
+        int result = calculator.add(5, 3);
+
+        System.out.println("Sum: " + result); 
     }
 }
+
 
 //5. String Objects - Concatenation, Literals, and More
 public class Main {
     public static void main(String[] args) {
-        String firstName = "John";
-        String lastName = "Doe";
+        String firstName = "Jon";
+        String lastName = "Max";
         String fullName = firstName + " " + lastName; 
         System.out.println("Full Name: " + fullName);
     }
@@ -68,10 +75,10 @@ public class Main {
 public class Main {
     public static void main(String[] args) {
         String text = "Hello, World!";
-        int length = text.length(); 
         String upperCase = text.toUpperCase(); 
-        System.out.println("Length: " + length);
-        System.out.println("Uppercase: " + upperCase);
+        int nrofLetters = text.length();
+        System.out.println("uppercase: " + upperCase);
+        System.out.println("the word is "+ nrofLetters + " letters long");
     }
 }
 
@@ -84,7 +91,7 @@ public class Main {
         double max = Math.max(x, y); 
         double sqrt = Math.sqrt(x); 
         
-        System.out.println("Max: " + max);
-        System.out.println("Square Root: " + sqrt);
+        System.out.println("max: " + max);
+        System.out.println("square Root: " + sqrt);
     }
 }

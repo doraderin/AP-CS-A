@@ -5,11 +5,11 @@ public class bmi_calculator {
         Scanner scan = new Scanner(System.in);
         System.out.print("enter weight in kgs: ");
         double weight = scan.nextDouble();
-        System.out.print("enter height in kgs: ");
+        System.out.print("enter height in cm: ");
         double height = scan.nextDouble();
         
-        double bmi = weight / (height*height);
-        System.out.print("BMI: "+bmi);
+        double bmi = (weight / (height*height))*10000;
+        System.out.print("BMI: "+ (int) bmi);
     }
 }  
         

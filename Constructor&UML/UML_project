@@ -104,12 +104,12 @@ public class Main {
             //private variables to store artist, year
             private String artist;
             private int year;
-
+            //constructor to create a band object 
             public Band(String a, int y) {
                 this.artist = a;
                 this.year = y;
             }
-
+            //getter methods
             public String getName() {
                 return artist;
             }
@@ -117,7 +117,7 @@ public class Main {
             public int getYear() {
                 return year;
             }
-
+             //setter methods
             public void setName(String a) {
                 this.artist = a;
             }
@@ -125,15 +125,16 @@ public class Main {
             public void setYear(int y) {
                 this.year = y;
             }
-
+            //returns the information of band as a string
             public String toString() {
                 return "band's name is  " + artist + ", and it was created in the year "+year ;
                
                 
             }
         }
-
+        //creates band object
         Band band1 = new Band("Pink Floyd", 1964);
+        //prints information of band1 with the use of toString method
         System.out.print(band1.toString());
     }
 }
@@ -142,17 +143,18 @@ public class Main {
 public class Main {
     public static void main(String[] args) {
         class Rectangle {
+            //private variables to store length, width, angle, sides, name
             private double length;
             private double width;
             private double angle;
             private int sides;
             private String name;
-
+            //constructor to create a rectangle object 
             public Rectangle(double l, double w) {
                 this.length = l;
                 this.width = w;
             }
-
+            //getter methods
             public double getLenght() {
                 return length;
             }
@@ -170,7 +172,7 @@ public class Main {
                 double perimeter = 2*(length+width);
                 return perimeter;
             }
-
+            //setter metods
             public void setLenght(double l) {
                 this.length = l;
             }
@@ -178,7 +180,7 @@ public class Main {
             public void setWidth(int w) {
                 this.width = w;
             }
-
+            //gets the area and perimeter of rectangle from getArea and getPreimeter methods and returns the information of rectangle as a string
             public String toString() {
                 double area = getArea();
                 double perimeter = getPerimeter();
@@ -187,8 +189,9 @@ public class Main {
                 
             }
         }
-
+        //creates a rectangle object 
         Rectangle shape1 = new Rectangle(5,6);
+        //prints the information of rectangle with the use of the toString method
         System.out.print(shape1.toString());
     }
 }

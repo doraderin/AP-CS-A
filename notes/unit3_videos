@@ -1,0 +1,43 @@
+Boolean Expressions / if statements
+
+
+
+relational operators (evaulate to true or false)
+== equal to
+!= not equal to
+< less than
+> greater than 
+<= less than or equal to
+>= greater than or equal to
+
+Boolean (logical) expressions 
+|| or
+&& and
+! not 
+
+example:
+a || b (will evaluate to true only if both a and b are true)
+a || b (will evaluate to true if either a or b is true)
+a! (will evaluate to opposite value of what a is) 
+
+De Morgans Law
+!(a && b) => (!a || !b) (not a and not b => not a or not b)
+!(a || b) => (!a && !b) (not a or b => not a and not b)
+!(x > 0) => (x <= 0)
+!(x <= 0) => (x > 0)
+
+
+
+comparison of strings should be handled by string methods
+.equal
+.compareTo                  
+DONT USE == or !=
+
+
+if condition 
+- will execute if true 
+- if no true is found in condition the if statement is skipped altogether
+
+nested if condition
+- it wont go in the nested if statement if the statement its nested in is false
+- else belongs to the closest if that doesnt have an else (java doesnt care about indentation)

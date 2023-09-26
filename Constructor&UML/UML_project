@@ -6,7 +6,7 @@ public class Main {
             private String breed;
             private int age;
 
-            //constructor to create a Dog object 
+            //constructor to create a Dog object and initiliaze the variables name, breed, age
             public Dog(String n, String b, int a) {
                 this.name = n;
                 this.breed = b;
@@ -57,7 +57,7 @@ public class Main {
             private String color;
             private boolean erasable;
 
-            //constructor to create a pen object 
+            //constructor to create a pen object and initiliaze the variables color and erasable
             public Pen(String c, boolean e) {
                 this.color = c;
                 this.erasable = e;
@@ -104,7 +104,7 @@ public class Main {
             //private variables to store artist, year
             private String artist;
             private int year;
-            //constructor to create a band object 
+            //constructor to create a band object and initiliaze the variables artist and year
             public Band(String a, int y) {
                 this.artist = a;
                 this.year = y;
@@ -149,7 +149,7 @@ public class Main {
             private double angle;
             private int sides;
             private String name;
-            //constructor to create a rectangle object 
+            //constructor to create a rectangle object and initiliaze the variables length and width
             public Rectangle(double l, double w) {
                 this.length = l;
                 this.width = w;

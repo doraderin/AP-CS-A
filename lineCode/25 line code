@@ -10,11 +10,18 @@ public class RectangleAreaCalculator {
         scanner.close();
 
         double area = length * width; // calculates area of rectangle
+        double perimeter = 2*(length+width); // calculates perimeter of rectangle
 
         if (area > 0) { //checks if area is a negative value
             System.out.println("The area of the rectangle is: " + area); // if area is a positive value it prints the area
         } else {
             System.out.println("Invalid input. Enter positive values for length and width."); //if area is a negative value it prints invalid input message 
         }
+        if (perimeter > 0) { //checks if perimeter is a negative value
+            System.out.println("The perimeter of the rectangle is: " + perimeter); // if perimeter is a positive value it prints the area
+        } else {
+            System.out.println("Invalid input. Enter positive values for length and width."); //if perimeter is a negative value it prints invalid input message 
+        }
     }
 }
+

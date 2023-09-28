@@ -1,0 +1,135 @@
+//https://introcs.cs.princeton.edu/java/31datatype/
+
+
+//Web excercises 
+//1. Painter's and printer's color triangles. Create the following two images. The primary hues of the painter's triangle are red, green, and blue; the primary hues of the printer's triangle are magenta, cyan, and yellow.
+
+import javax.swing.*;
+import java.awt.*;
+
+public class ColorTriangles extends JPanel {
+    @Override
+    //with the use of "protected void" the method can be accessed by subclasses and classes in the same package, and it doesn't return any value when it's called
+    protected void paintComponent(Graphics g) { //defines the paintComponent method, which is called by Swing. It takes object g as an argument, which is used to draw on the panel.
+        super.paintComponent(g);
+
+        //Painter's Triangle
+        g.setColor(Color.RED); //Sets the color of g to red.
+        g.fillRect(50, 50, 100, 100); //Draws a filled rectangle (a square) at coordinates (50, 50) with a width and height of 100 pixels. This represents the red portion of the painter's triangle.
+
+        g.setColor(Color.GREEN);
+        g.fillRect(150, 50, 100, 100);
+
+        g.setColor(Color.BLUE);
+        g.fillRect(100, 150, 100, 100);
+
+        // Printer's Triangle
+        g.setColor(Color.MAGENTA);
+        g.fillRect(300, 50, 100, 100);
+
+        g.setColor(Color.CYAN);
+        g.fillRect(400, 150, 100, 100);
+
+        g.setColor(Color.YELLOW);
+        g.fillRect(350, 250, 100, 100);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Color Triangles"); //Creates a JFrame window with the title "Color Triangles."
+        ColorTriangles colorTriangles = new ColorTriangles(); //Creates an instance of the ColorTriangles class.
+        frame.add(colorTriangles); //Adds the colorTriangles panel to the JFrame.
+        frame.setSize(550, 400); //Sets the size of the JFrame to 550 pixels wide and 400 pixels tall.
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true); // Sets the JFrame to be visible
+    }
+}
+
+
+// 2. Two-stroke apparent motion. Create the optical illusion of two-stroke apparent motion or four-stroke
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ApparentMotionDemo extends JPanel implements ActionListener {
+    private int xPosition;    // X-coordinate of the circle
+    private int yPosition;    // Y-coordinate of the circle
+    private int deltaX = 5;  // Horizontal movement increment
+    private int deltaY = 5;  // Vertical movement increment
+    private Timer timer;      // Timer for animation
+
+    public ApparentMotionDemo() {
+        xPosition = 50;     // Initial X-coordinate
+        yPosition = 50;     // Initial Y-coordinate
+
+        // Create a timer that triggers the actionPerformed method every 50 milliseconds
+        timer = new Timer(50, this);
+        timer.start();      // Start the timer to begin animation
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // Set the color to red and draw a filled circle at the specified position
+        g.setColor(Color.RED);
+        g.fillOval(xPosition, yPosition, 50, 50); // (x, y, width, height)
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Update the circle's position by adding the increments
+        xPosition += deltaX;
+        yPosition += deltaY;
+
+        // Check if the circle has reached the edges of the panel
+        if (xPosition >= getWidth() || xPosition <= 0) {
+            deltaX = -deltaX; // Reverse direction on reaching the edge
+        }
+
+        if (yPosition >= getHeight() || yPosition <= 0) {
+            deltaY = -deltaY; // Reverse direction on reaching the edge
+        }
+
+        repaint(); // Trigger a repaint to create the illusion of motion
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Two-Stroke Apparent Motion");
+        ApparentMotionDemo demo = new ApparentMotionDemo();
+        frame.add(demo);
+        frame.setSize(400, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
+
+
+
+//4. Color spectrum. Write a program Spectrum.java that draws all 2^24 possible colors, by drawing for each red value a 256-by-256 array of color chips (one for each green and blue value).
+import java.awt.Color;
+
+public class Spectrum {
+
+    public static void main(String[] args) {
+
+        // set scale and turn on animation mode
+        StdDraw.setXscale(-1, 256);
+        StdDraw.setYscale(-1, 256);
+        StdDraw.enableDoubleBuffering();
+
+        // draw the color chips
+        for (int r = 0; r < 255; r++) {
+            StdOut.println("red = " + r);
+            for (int g = 0; g < 255; g++) {
+                for (int b = 0; b < 255; b++) {
+                    Color c = new Color(r, g, b);
+                    StdDraw.setPenColor(c);
+                    StdDraw.filledSquare(g, b, 0.5);
+                }
+            }
+            StdDraw.show();
+            StdDraw.pause(10);
+        }
+    }
+}

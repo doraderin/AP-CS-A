@@ -1,4 +1,36 @@
-//https://classroom.google.com/c/NjIwNDQ4OTA2ODg0/a/NjIxMDgwMTQxODc0/details
+//https://introcs.cs.princeton.edu/java/12types/
+
+
+//1.  sets a, b, and t equal to the original value of a.
+int t = a;
+b = t;
+a = b;
+
+//4. 
+//(!(a < b) && !(a > b)) this equals to (a == b)
+
+//6. Why does 10/3 give 3 and not 3.33333333?
+// because integer division
+
+//7. What do each of the following print?
+System.out.println(2 + "bc"); //prints: 2bc
+System.out.println(2 + 3 + "bc"); //prints: 5bc
+System.out.println((2+3) + "bc"); //prints: 5bc
+System.out.println("bc" + (2+3)); //prints: bc5
+System.out.println("bc" + 2 + 3); //prints: bc23 
+
+//8. Write a program SumOfSines.java that takes a double command-line argument t (in degrees) and prints the value of sin(2t) + sin(3t).
+import java.util.Scanner;
+public class SumOfSines {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter num (degrees): ");
+        double t = s.nextDouble();
+        
+        double sum = Math.sin(2 * t) + Math.sin(3 * t);
+        System.out.println("sin(2t) + sin(3t) is "+sum);
+    }
+}
 
 
 //18. takes two integers x and y and prints the Euclidean distance from the point (x, y) to the origin (0, 0).
@@ -56,9 +88,9 @@ public class SpringSeason {
     }
 }
 
+//Creative exercises
 
 //25. takes two double command-line arguments t and v and prints the wind chill.
-
 import java.util.Scanner;
 public class WindChill {
     public static void main(String[] args) {
@@ -74,8 +106,23 @@ public class WindChill {
     }
 }
 
-//29. takes a date as input and prints the day of the week that date falls on.
+//26. Polar coordinates. Write a program CartesianToPolar.java that converts from Cartesian to polar coordinates. 
+import java.util.Scanner;
+public class SumOfSines {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter num (x): ");
+        int x = s.nextInt();
+        System.out.print("enter num (y): ");
+        int y = s.nextInt();
+        
+        double coordinates = Math.atan2(y, x);
+        System.out.println("polar coordinates "+coordinates);
+    }
+}
 
+
+//29. takes a date as input and prints the day of the week that date falls on.
 import java.util.Scanner;
 public class DayOfWeek {
     public static void main(String[] args) {
@@ -98,8 +145,36 @@ public class DayOfWeek {
     }
 }
 
-//34. takes three int values from the command line and prints them in ascending order.
+//30. Uniform random numbers. Write a program Stats5.java that prints five uniform random values between 0 and 1, their average value, and their minimum and maximum value. Use Math.random(), Math.min(), and Math.max().
+import java.util.Scanner;
+public class SumOfSines {
+    public static void main(String[] args) {
+        int n = 5;
+        double x1 = Math.random();
+        double x2 = Math.random();
+        double x3 = Math.random();
+        double x4 = Math.random();
+        double x5 = Math.random();
 
+        System.out.println(x1);
+        System.out.println(x2);
+        System.out.println(x3);
+        System.out.println(x4);
+        System.out.println(x5);
+
+        double min     = Math.min(x1, Math.min(x2, Math.min(x3, Math.min(x4, x5))));
+        double max     = Math.max(x1, Math.max(x2, Math.max(x3, Math.max(x4, x5))));
+        double average = (x1 + x2 + x3 + x4 + x5) / n;
+
+        // print stats
+        System.out.println("Average = " + average);
+        System.out.println("Min     = " + min);
+        System.out.println("Max     = " + max);
+    }
+}
+
+
+//34. takes three int values from the command line and prints them in ascending order.
 import java.util.Scanner;
 public class ThreeSort {
     public static void main(String[] args) {

@@ -1,0 +1,19 @@
+//19. Write a program Divisibility.java that reads in two command line inputs and prints true if both are divisible by 7, and false otherwise.
+import java.util.Scanner;
+
+public class Divisibility {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter first number: ");
+        int num1 = s.nextInt();
+        System.out.print("enter second number: ");
+        int num2 = s.nextInt();
+        
+        if(num1%7==0 && num2%7==0){
+            System.out.print("true");
+        }
+        else{
+            System.out.print("false");
+        }
+    }
+}

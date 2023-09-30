@@ -1,0 +1,15 @@
+//22. Body mass index. The body mass index (BMI) is the ratio of the weight of a person (in kilograms) to the square of the height (in meters). Write a program BMI.java that takes two command-line arguments, weight and height, and prints the BMI.
+import java.util.Scanner;
+
+public class BMI {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("enter weight in kgs: ");
+        double weight = scan.nextDouble();
+        System.out.print("enter height in cm: ");
+        double height = scan.nextDouble();
+        
+        double bmi = (weight / (height*height))*10000;
+        System.out.print("BMI: "+ (int) bmi);
+    }
+}  

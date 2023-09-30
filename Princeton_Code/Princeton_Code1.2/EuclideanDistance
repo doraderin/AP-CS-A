@@ -1,0 +1,15 @@
+//18. takes two integers x and y and prints the Euclidean distance from the point (x, y) to the origin (0, 0).
+import java.util.Scanner;
+public class Distance {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("enter x: ");
+        int x = scan.nextInt();
+        System.out.print("enter y: ");
+        int y = scan.nextInt();
+
+        int product = x*x + y*y;
+        int distance = (int) java.lang.Math.sqrt(product);
+        System.out.print(distance);
+    }
+}    

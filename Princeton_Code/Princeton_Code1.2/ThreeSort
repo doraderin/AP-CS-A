@@ -1,0 +1,29 @@
+//34. takes three int values from the command line and prints them in ascending order.
+import java.util.Scanner;
+public class ThreeSort {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in); 
+        System.out.print("enter first number: ");
+        int x = scan.nextInt();
+        System.out.print("enter second number: ");
+        int y = scan.nextInt();
+        System.out.print("enter third number: ");
+        int z = scan.nextInt();
+        
+        int min = Math.min(Math.min(x, y), z);
+        int max = Math.max(Math.max(x, y), z);
+        int middle;
+        if(min == x && max == y || min == y || max == x){
+            middle = z;
+        }
+        else if(min == z && max == y || min == y || max == z){
+            middle = x;
+        }
+        else{
+            middle = y;
+        }
+        
+        System.out.print("the numbers in ascending order: "+min+middle+max);
+       
+    }
+}

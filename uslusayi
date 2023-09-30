@@ -10,7 +10,6 @@ public class uslusayi {
         
         int result = 1;
         for (int i = 1; i < n2+1; i++){
-            //System.out.println(i);
             result *= n1 ;
         }
         

@@ -1,0 +1,12 @@
+//21. Write a program SumOfSines.java that takes a double command-line argument t (in degrees) and prints the value of sin(2t) + sin(3t).
+import java.util.Scanner;
+public class SumOfSines {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter num (degrees): ");
+        double t = s.nextDouble();
+        
+        double sum = Math.sin(2 * t) + Math.sin(3 * t);
+        System.out.println("sin(2t) + sin(3t) is "+sum);
+    }
+}

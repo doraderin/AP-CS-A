@@ -1,0 +1,14 @@
+//26. Polar coordinates. Write a program CartesianToPolar.java that converts from Cartesian to polar coordinates. 
+import java.util.Scanner;
+public class CartesianToPolar {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter num (x): ");
+        int x = s.nextInt();
+        System.out.print("enter num (y): ");
+        int y = s.nextInt();
+        
+        double coordinates = Math.atan2(y, x);
+        System.out.println("polar coordinates "+coordinates);
+    }
+}

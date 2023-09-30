@@ -1,0 +1,22 @@
+//18. Write a program Ordered.java that reads in three integer command line arguments, x, y, and z. Create a boolean variable b that is true if the three values are either in ascending or in descending order, and false otherwise. Print the variable b.
+
+import java.util.Scanner;
+public class Ordered {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        boolean b;
+        System.out.print("Enter the first number: ");
+        int x = s.nextInt();
+        System.out.print("Enter the second number: ");
+        int y = s.nextInt();
+        System.out.print("Enter the third number: ");
+        int z = s.nextInt();
+        
+        if ((x < y && y < z) || (x > y && y > z)) {
+            b = true;
+        } else {
+            b = false;
+        }
+        System.out.print(b);
+    }
+}

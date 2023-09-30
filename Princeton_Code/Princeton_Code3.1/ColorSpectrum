@@ -1,0 +1,27 @@
+//4. Color spectrum. Write a program Spectrum.java that draws all 2^24 possible colors, by drawing for each red value a 256-by-256 array of color chips (one for each green and blue value).
+import java.awt.Color;
+
+public class Spectrum {
+
+    public static void main(String[] args) {
+
+        // set scale and turn on animation mode
+        StdDraw.setXscale(-1, 256);
+        StdDraw.setYscale(-1, 256);
+        StdDraw.enableDoubleBuffering();
+
+        // draw the color chips
+        for (int r = 0; r < 255; r++) {
+            StdOut.println("red = " + r);
+            for (int g = 0; g < 255; g++) {
+                for (int b = 0; b < 255; b++) {
+                    Color c = new Color(r, g, b);
+                    StdDraw.setPenColor(c);
+                    StdDraw.filledSquare(g, b, 0.5);
+                }
+            }
+            StdDraw.show();
+            StdDraw.pause(10);
+        }
+    }
+}

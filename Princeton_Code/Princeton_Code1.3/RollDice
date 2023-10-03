@@ -1,8 +1,5 @@
 //1. (web exercises) Write a program RollDie.java that generates the result of rolling a fair six-sided die (an integer between 1 and 6).
 
-import java.util.Scanner;
-
-import java.util.Scanner;
 public class RollDice {
     public static void main(String[] args) {
        int randomNr = (int) (Math.random()*6)+1;

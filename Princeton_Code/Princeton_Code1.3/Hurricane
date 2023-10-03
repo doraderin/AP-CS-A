@@ -1,0 +1,34 @@
+//8. (web exercises) Write a program Hurricane.java that that takes the wind speed (in miles per hour) as an integer command-line argument and prints whether it qualifies as a hurricane, and if so, whether it is a Category 1, 2, 3, 4, or 5 hurricane
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Hurricane {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter wind speed (m/h) : ");
+        int windSpeed = s.nextInt();
+        
+        if(windSpeed < 74){
+            System.out.print("this does not qualify as wind speed");
+        }
+        else if(windSpeed>=74 && windSpeed<=95){
+            System.out.print("this is category 1 wind speed");
+        }
+        else if(windSpeed>=96 && windSpeed<=110){
+            System.out.print("this is category 2 wind speed");
+        }
+        else if(windSpeed>=111 && windSpeed<=130){
+            System.out.print("this is category 3 wind speed");
+        }
+        else if(windSpeed>=131 && windSpeed<155){
+            System.out.print("this is category 4 wind speed");
+        }
+        else{
+            System.out.print("this is category 5 wind speed");
+        }
+        
+    }
+}
+
+

@@ -1,0 +1,28 @@
+//3. (web exercises) Write a program that takes five integer command-line arguments and prints the median (the third largest one).
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Median {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter first number: ");
+        int nr1 = s.nextInt();
+        System.out.print("enter second number: ");
+        int nr2 = s.nextInt();
+        System.out.print("enter third number: ");
+        int nr3 = s.nextInt();
+        System.out.print("enter fourth number: ");
+        int nr4 = s.nextInt();
+        System.out.print("enter fifth number: ");
+        int nr5 = s.nextInt();
+        
+        int[] numbers = {nr1, nr2, nr3, nr4, nr5};
+        Arrays.sort(numbers);
+
+        int median = numbers[2]; 
+        System.out.println("the median is " + median);
+    }
+}
+
+

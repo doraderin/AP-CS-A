@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+public class Multiple {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter range: ");
+        int range = s.nextInt();
+        System.out.print("enter first number: ");
+        int nr1 = s.nextInt();
+        System.out.print("enter second number: ");
+        int nr2 = s.nextInt();
+        int sum1 = 0;
+        System.out.print("enter first number: ");
+        int nr3 = s.nextInt();
+        System.out.print("enter second number: ");
+        int nr4 = s.nextInt();
+        int sum2 = 0;
+        
+        for(int i = 0; i < range; i++){
+            if (i % nr1 == 0){
+                sum1 += i;
+            }
+            if (i % nr2 == 0){
+                sum1 += i;
+            }
+            if (i % (nr1*nr2) == 0){
+                sum1 -= i;
+            }
+        }
+        for(int i = 0; i < range; i++){
+            if (i % nr3 == 0){
+                sum2 += i;
+            }
+            if (i % nr4 == 0){
+                sum2 += i;
+            }
+            if (i % (nr3*nr4) == 0){
+                sum2 -= i;
+            }
+        }
+        System.out.println("the sum of multiples of "+nr1+" and "+nr2+": "+sum1);
+        System.out.println("the sum of multiples of "+nr3+" and "+nr4+": "+sum2);
+        System.out.println(Math.abs(sum1-sum2));
+    }
+}
+

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class BinaryToString {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter a number in binary ");
+        int BinaryNum = s.nextInt();
+        
+       int StrNUm = 0;
+       int track = 0;
+       
+       while (BinaryNum > 0){
+            if (BinaryNum % 10 == 1){
+                StrNUm += (int) Math.pow(2,track);
+                BinaryNum = BinaryNum / 10;
+                track++;
+        }
+            if (BinaryNum % 10 == 0){
+                track++;
+                BinaryNum = BinaryNum / 10;
+             }
+       }
+       System.out.println("nr in string: "+StrNUm);
+    }
+}

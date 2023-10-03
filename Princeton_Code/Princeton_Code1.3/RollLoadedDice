@@ -1,6 +1,6 @@
 //6. Write a program RollLoadedDie.java that prints the result of rolling a loaded die such that the probability of getting a 1, 2, 3, 4, or 5 is 1/8 and the probability of getting a 6 is 3/8.
 
-import java.util.Scanner;
+
 public class RollLoadedDice {
     public static void main(String[] args) {
        int randomNr = (int) (Math.random()*8)+1;

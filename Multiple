@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Multiple {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.print("enter range: ");
-        int range = s.nextInt();
+        System.out.print("enter range: "); //prints the sentence
+        int range = s.nextInt(); //scans the value entered and assigns it to range
         System.out.print("enter first number: ");
         int nr1 = s.nextInt();
         System.out.print("enter second number: ");
@@ -16,18 +16,18 @@ public class Multiple {
         int nr4 = s.nextInt();
         int sum2 = 0;
         
-        for(int i = 0; i < range; i++){
-            if (i % nr1 == 0){
+        for(int i = 0; i < range; i++){ //enters the for loop as long as int i is greater than range, increases i by 1 
+            if (i % nr1 == 0){ //checks if i is divisible by nr1
+                sum1 += i; //adds the current value of i to sum1
+            }
+            if (i % nr2 == 0){ //checks if i is divisible by nr2
                 sum1 += i;
             }
-            if (i % nr2 == 0){
-                sum1 += i;
-            }
-            if (i % (nr1*nr2) == 0){
-                sum1 -= i;
+            if (i % (nr1*nr2) == 0){ //checks if i is divisible by the product of nr1 and nr2 
+                sum1 -= i; //substracts the value from sum
             }
         }
-        for(int i = 0; i < range; i++){
+        for(int i = 0; i < range; i++){ //for loop to check for divisibilty for num3 and num4
             if (i % nr3 == 0){
                 sum2 += i;
             }
@@ -38,7 +38,7 @@ public class Multiple {
                 sum2 -= i;
             }
         }
-        System.out.println("the sum of multiples of "+nr1+" and "+nr2+": "+sum1);
+        System.out.println("the sum of multiples of "+nr1+" and "+nr2+": "+sum1); //prints the sum of multiples 
         System.out.println("the sum of multiples of "+nr3+" and "+nr4+": "+sum2);
         System.out.println(Math.abs(sum1-sum2));
     }

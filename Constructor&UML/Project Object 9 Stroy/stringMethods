@@ -1,0 +1,10 @@
+//6. String Methods:
+public class Main {
+    public static void main(String[] args) {
+        String text = "Hello, World!";
+        String upperCase = text.toUpperCase(); 
+        int nrofLetters = text.length();
+        System.out.println("uppercase: " + upperCase);
+        System.out.println("the word is "+ nrofLetters + " letters long");
+    }
+}

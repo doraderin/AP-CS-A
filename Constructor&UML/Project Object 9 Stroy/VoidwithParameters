@@ -1,0 +1,12 @@
+//3. Calling a Void Method with Parameters (prints sum of 2 numbers, 8)
+public class Calculator {
+    public void add(int num1, int num2) {
+        int sum = num1 + num2;
+        System.out.println("sum: " + sum);
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        calculator.add(5, 3); 
+    }
+}

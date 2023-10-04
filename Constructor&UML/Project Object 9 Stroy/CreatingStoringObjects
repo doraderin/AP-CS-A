@@ -1,0 +1,18 @@
+//1. Creating and Storing Objects (Instantiation) (prints dog name+age for 2 dogs)
+public class Dog {
+    String name;
+    int age;
+
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public static void main(String[] args) {
+        Dog dog1 = new Dog("Bob", 3);
+        Dog dog2 = new Dog("Max", 2);
+
+        System.out.println(dog1.name + " is " + dog1.age + " years old.");
+        System.out.println(dog2.name + " is " + dog2.age + " years old.");
+    }
+}

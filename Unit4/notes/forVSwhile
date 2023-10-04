@@ -1,0 +1,22 @@
+
+//Comparison (both give the same output)
+//for loop
+for (int num = 1; num <= 5; num++){
+    System.out.println(num);
+}
+System.out.println("finished");
+
+//while loop
+int num = 1
+while (num < 5){
+    System.out.println(num);
+    num++
+}
+System.out.println("finished");
+
+
+/*
+ * for loops are better if a statement needs to be repeated a certain number of times
+ * while loops are better is the number of times a loop has to be repeated is unknown
+ * while loops might also be better is the increment needed is more complex
+ */

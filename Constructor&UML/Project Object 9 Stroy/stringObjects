@@ -1,0 +1,9 @@
+//5. String Objects - Concatenation, Literals, and More
+public class Main {
+    public static void main(String[] args) {
+        String firstName = "Jon";
+        String lastName = "Max";
+        String fullName = firstName + " " + lastName; 
+        System.out.println("Full Name: " + fullName);
+    }
+}

@@ -1,0 +1,32 @@
+//while loop example (guessing game, user tries to guess nt between 1 and 100)
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class 4.1whileLoop {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Random rnd = new Random();
+
+        int secretNum = rnd.nextInt(100) + 1;
+        int attempts = 0;
+        //System.out.print(secretNum);
+
+        System.out.println("guess a number between 1 and 100.");
+        int userNr = s.nextInt();
+        
+        while(userNr!=secretNum){
+            System.out.println("wrong guess! try again");
+            System.out.println("guess a number between 1 and 100.");
+            userNr = s.nextInt();
+            attempts ++;
+        }
+        if(userNr==secretNum){
+            System.out.println("you guessed right, it took you "+attempts+" tries ");
+        }
+
+     
+    }
+}
+
+

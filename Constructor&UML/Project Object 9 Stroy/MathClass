@@ -1,0 +1,13 @@
+//Using the Math Class
+public class Main {
+    public static void main(String[] args) {
+        double x = 5.0;
+        double y = 3.0;
+        
+        double max = Math.max(x, y); 
+        double sqrt = Math.sqrt(x); 
+        
+        System.out.println("max: " + max);
+        System.out.println("square Root: " + sqrt);
+    }
+}

@@ -1,4 +1,4 @@
-//while loop example (guessing game, user tries to guess nt between 1 and 100)
+//4.1 while loop example (guessing game, user tries to guess nt between 1 and 100)
 
 import java.util.Random;
 import java.util.Scanner;

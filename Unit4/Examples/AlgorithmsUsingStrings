@@ -1,0 +1,27 @@
+//4.3 Developing Algorithms Using Strings example  (gets a word from user, reverses the letters and checks if the original word remains the same when reversed)
+
+import java.util.Scanner;
+
+public class AlgorithmsUsingStrings {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter a word: ");
+        String word = s.nextLine();
+        String reverse = "";
+
+        for(int i = 0; i < word.length(); i++){
+            String letter = word.substring(i,i+1);
+            reverse = letter + reverse; 
+        }
+        System.out.println("word: "+word);
+        System.out.println("word reversed: "+reverse);
+        if (reverse.equals(word)){
+            System.out.println("this word is the same backwards");
+        }
+        else{
+            System.out.println("this word is different if written backward");
+        }
+    }
+}
+
+

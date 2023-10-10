@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class RectangleAreaCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); //imports scanner to be able to take input from user
+        System.out.print("Enter the length of the rectangle: "); //asks for a number value for the lenght of rectangle 
+        double length = scanner.nextDouble(); // reads the input from user and assingns it it a double called lenght
+        scanner.nextLine();
+        System.out.print("Enter the width of the rectangle: "); //asks for a number value for the width of rectangle 
+        double width = scanner.nextDouble(); // reads the input from user and assingns it it a double called width
+        scanner.nextLine();
+        System.out.print("Do you want perimeter or area: "); //asks for a number value for the lenght of rectangle 
+        String calc = scanner.nextLine(); // reads the input from user
+        scanner.close();
+
+        double area = length * width; // calculates area of rectangle
+        double perimeter = 2*(length+width); // calculates perimeter of rectangle
+
+        if (area > 0) { //checks if area is a negative value
+            if (calc.equals("perimeter")){
+                System.out.println("The perimeter of the rectangle is: " + perimeter); // if perimeter is a positive value it prints the area
+            }
+            else if (calc.equals("area")){
+                 System.out.println("The area of the rectangle is: " + area); // if area is a positive value it prints the area
+            }
+            else{
+                System.out.print("enter valid answer for perimeter or area");
+            }
+            
+        } else {
+            System.out.println("Invalid input. Enter positive values for length and width."); //if area is a negative value it prints invalid input message 
+        }
+    }
+}

@@ -1,1 +1,19 @@
-//4.2 for loop 
+//4.2 for loop (calculates the sum of numbers between two numbers entered by user)
+
+import java.util.Scanner;
+
+class forLoop {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter a number: ");
+        int startNr = s.nextInt();
+        System.out.print("enter another number: ");
+        int endNr = s.nextInt();
+        int sum = 0;
+        
+        for (int i =startNr; i <= endNr; i++) {
+            sum += i;
+        }
+        System.out.println("Sum of numbers from " + startNr+" to "+endNr+" is "+sum);
+    }
+}

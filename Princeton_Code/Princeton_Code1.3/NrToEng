@@ -1,0 +1,88 @@
+//21. Number-to-English. Write a program to read in a command line integer between -999,999,999 and 999,999,999 and print the English equivalent.
+
+import java.util.Scanner;
+
+public class NextPrime {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter a number: ");
+        int nr = s.nextInt();
+        
+        int countDigit = 0; 
+        int nrCalc = nr;
+        String word = "";
+        
+        while (nrCalc > 0) {
+            nrCalc = nrCalc / 10;
+            countDigit++;
+        }
+        
+        
+        if(countDigit == 2){
+            int tensDigit = (nr / 10) % 10; // Get the tens digit
+            if(tensDigit == 1){
+                word += "ten";
+            }
+            if(tensDigit == 2){
+                word += "twenty ";
+            }
+            if(tensDigit == 3){
+                word += "thirty ";
+            }
+            if(tensDigit == 4){
+                word += "forty ";
+            }
+            if(tensDigit == 5){
+                word += "fifty ";
+            }
+            if(tensDigit == 6){
+                word += "sixty ";
+            }
+            if(tensDigit == 7){
+                word += "seventy ";
+            }
+            if(tensDigit == 8){
+                word += "eighty ";
+            }
+            if(tensDigit == 9){
+                word += "ninety ";
+            }
+            countDigit--;
+        }
+        if(countDigit == 1){
+            int unitsDigit = nr % 10;
+            if(unitsDigit == 1){
+                word += "one";
+            }
+            if(unitsDigit == 2){
+                word += "two";
+            }
+            if(unitsDigit == 3){
+                word += "three";
+            }
+            if(unitsDigit == 4){
+                word += "four";
+            }
+            if(unitsDigit == 5){
+                word += "five";
+            }
+            if(unitsDigit == 6){
+                word += "six";
+            }
+            if(unitsDigit == 7){
+                word += "seven";
+            }
+            if(unitsDigit == 8){
+                word += "eight";
+            }
+            if(unitsDigit == 9){
+                word += "nine";
+            }
+            if(unitsDigit == 0){
+                word += "zero";
+            }
+        }
+        System.out.print(word);
+        //System.out.print(countDigit);
+    }
+}

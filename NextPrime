@@ -6,8 +6,8 @@ public class NextPrime {
         System.out.print("Enter a prime number: ");
         int prime = scanner.nextInt();
         
-        if (isPrime(prime)) {
-            int nextPrime = findNextPrime(prime);
+        if (isPrime(prime)) { //checks if num is prime
+            int nextPrime = findNextPrime(prime); //find the next prime number
             System.out.println("The next prime number is: " + nextPrime);
         } else {
             System.out.println(prime + " is not a prime number.");
@@ -17,11 +17,11 @@ public class NextPrime {
     }
 
     public static boolean isPrime(int num) {
-        if (num <= 1) {
+        if (num <= 1) { // numbers equal to or less than 1 are not prime
             return false;
         }
         for (int i = 2; i * i <= num; i++) {
-            if (num % i == 0) {
+            if (num % i == 0) { // if the number is divisible by any number from 2 to its square root then its not prime
                 return false;
             }
         }

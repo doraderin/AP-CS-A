@@ -1,0 +1,181 @@
+package apCsA;
+import java.util.Scanner;
+
+public class GeometryQuiz {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Welcome to the geometry quiz!");
+        System.out.println("You need to calculate the area of the following shapes.");
+        System.out.println("Here is your first question:");
+
+        createSquare(5, 5);
+        
+        System.out.println(" ");
+        System.out.print("Q1: What is the area of this square? (every o is one unit) ");
+        int area = s.nextInt();
+        s.nextLine(); 
+
+        int score = 0;
+        int tries = 3;
+
+        if (area == 5 * 5) {
+        	score += 5;
+        	correctAnswer();
+        	System.out.println("Your current score: " + score);
+        } 
+        else {
+            tries = 3;
+            wrongAnswer();
+            System.out.println("Do you want to try again or go to the next question? You have 3 tries left (type 'a' for again and 's' to skip) ");
+            String answer = s.nextLine();
+
+            if (answer.equals("a")) {
+                for (int i = tries; i > 0; i--) {
+                    System.out.println("Q1: What is the area of this square? (every 0 is one unit) ");
+                    area = s.nextInt();
+                    s.nextLine(); 
+                    if (area == 5 * 5) {
+                    	score += 5;
+                    	correctAnswer();
+                    	System.out.println("Your current score: " + score);
+                        break;
+                    } else {
+                        tries--;
+                        System.out.println("Wrong answer :(");
+                        System.out.println("You have "+tries+" tries left");
+                        if(tries<=0){
+                            System.out.print("Game over");
+                        }
+                    }
+                }
+            }
+            else if (answer.equals("s")){
+                System.out.print("Okay! Your score: "+score);
+            }
+                
+            
+        }
+        
+        if(tries>0) {
+        	System.out.println("Here is your second question:");
+        	
+        	createTriangle(10,5);
+        	
+        	System.out.println("What is the area of this triagnle?) ");
+            int area2 = s.nextInt();
+            
+            if (area2 == (10*5)/2) {
+            	score += 5;
+            	correctAnswer();
+            	System.out.println("Your current score: " + score);
+            }
+            else {
+                int tries2 = 3;
+                wrongAnswer();
+                System.out.print("Do you want to try again or go to the next question? You have 3 tries left (type 'a' for again and 's' to skip) ");
+                String answer2 = s.nextLine();
+
+                if (answer2.equals("a")) {
+                    for (int i = tries2; i > 0; i--) {
+                        System.out.print("Q1: What is the area of this triangle? (every 0 is one unit) ");
+                        area2 = s.nextInt();
+                        s.nextLine(); 
+                        if (area2 == (10*5)/2) {
+                        	score += 5;
+                        	correctAnswer();
+                        	System.out.println("Your current score: " + score);
+                            break;
+                        } else {
+                            tries2--;
+                            System.out.println("Wrong answer :(");
+                            System.out.println("You have "+tries2+" tries left");
+                            if(tries2<0){
+                                System.out.print("Game over");
+                            }
+                        }
+                    }
+                }
+                else if (answer2.equals("s")){
+                    System.out.print("Okay! Your score: "+score);
+                }
+               
+        }
+        }
+    
+ 
+        System.out.println("Here is your third question:");
+        
+        createSquare(8,5);
+        
+        System.out.println("What is the area of this rectangle? ");
+        int area3 = s.nextInt();
+        
+        if (area3 == 8*5) {
+        	score += 5;
+        	correctAnswer();
+        	System.out.println("Your current score: " + score);
+        }
+        else {
+            tries = 3;
+            wrongAnswer();
+            System.out.print("Do you want to try again or go to the next question? You have 3 tries left (type 'a' for again and 's' to skip) ");
+            String answer3 = s.nextLine();
+
+            if (answer3.equals("a")) {
+                for (int i = tries; i > 0; i--) {
+                    System.out.print("Q1: What is the area of this rectangle? (every 0 is one unit) ");
+                    area3 = s.nextInt();
+                    s.nextLine(); 
+                    if (area3 == 8*5) {
+                    	score += 5;
+                    	correctAnswer();
+                    	System.out.println("Your current score: " + score);
+                        break;
+                    } else {
+                        tries--;
+                        System.out.println("Wrong answer :(");
+                        System.out.println("You have "+tries+" tries left");
+                        if(tries<0){
+                            System.out.print("Game over");
+                        }
+                    }
+                }
+            }
+            else if (answer3.equals("s")){
+                System.out.print("Okay! Your score: "+score);
+            }
+        }
+    //s.close();
+    }
+       
+
+    public static void createSquare(int x, int y) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print("o");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void correctAnswer() {
+        System.out.println("Correct answer!");
+        System.out.println(" ");
+    }
+    
+    public static void wrongAnswer() {
+    	System.out.println("Wrong answer :(");
+    }
+
+    public static void createTriangle(int x, int y) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("o");
+            }
+            System.out.println();
+        }
+    }
+    
+    
+}

@@ -1,0 +1,66 @@
+//22.  A gymnast's score is determined by a panel of 6 judges who each decide a score between 0.0 and 10.0. The final score is determined by discarding the high and low scores, and averaging the remaining 4. Write a program GymnasticsScorer.java that takes 6 real command line inputs representing the 6 scores and prints their average, after throwing out the high and low scores.
+import java.util.Scanner;
+
+class GymnasticsScorer {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        System.out.print("enter score 1: ");
+        double s1 = s.nextDouble();
+        System.out.print("enter score 2: ");
+        double s2 = s.nextDouble();
+        System.out.print("enter score 3: ");
+        double s3 = s.nextDouble();
+        System.out.print("enter score 4: ");
+        double s4 = s.nextDouble();
+        System.out.print("enter score 5: ");
+        double s5 = s.nextDouble();
+        System.out.print("enter score 6: ");
+        double s6 = s.nextDouble();
+        
+        double biggest = 0;
+        double smallest = 0;
+        
+       if (s1 > smallest){
+            smallest = s1;
+        }
+        if(s2 < smallest){
+            smallest = s2;
+        }
+        if(s3 < smallest){
+            smallest = s3;
+        }
+        if(s4 < smallest){
+            smallest = s4;
+        }
+        if(s5 < smallest){
+            smallest = s5;
+        }
+        if(s6 < smallest){
+            smallest = s6;
+        }
+        
+        if (s1 > biggest){
+            biggest = s1;
+        }
+        if(s2 > biggest){
+            biggest = s2;
+        }
+        if(s3 > biggest){
+            biggest = s3;
+        }
+        if(s4 > biggest){
+            biggest = s4;
+        }
+        if(s5 > biggest){
+            biggest = s5;
+        }
+        if(s6 > biggest){
+            biggest = s6;
+        }
+        double sum = (s1+s2+s3+s4+s5+s6) - (biggest+smallest);
+        double avg = sum / 4;
+        
+        System.out.print("the avg of scores without highest and lowest is "+ avg);
+    }
+}

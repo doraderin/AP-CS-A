@@ -51,7 +51,7 @@ public class GeometryQuiz {
                 }
             }
             else if (answer.equals("s")){
-                System.out.print("Okay! Your score: "+score);
+                System.out.println("Okay! Your score: "+score);
             }
                 
             
@@ -64,6 +64,7 @@ public class GeometryQuiz {
         	
         	System.out.println("What is the area of this triagnle?) ");
             int area2 = s.nextInt();
+            s.nextLine(); 
             
             if (area2 == (10*5)/2) {
             	score += 5;
@@ -102,7 +103,6 @@ public class GeometryQuiz {
                
         }
         }
-    
  
         System.out.println("Here is your third question:");
         
@@ -110,6 +110,7 @@ public class GeometryQuiz {
         
         System.out.println("What is the area of this rectangle? ");
         int area3 = s.nextInt();
+        s.nextLine(); 
         
         if (area3 == 8*5) {
         	score += 5;
@@ -166,6 +167,7 @@ public class GeometryQuiz {
     
     public static void wrongAnswer() {
     	System.out.println("Wrong answer :(");
+    	System.out.println(" ");
     }
 
     public static void createTriangle(int x, int y) {
@@ -176,6 +178,4 @@ public class GeometryQuiz {
             System.out.println();
         }
     }
-    
-    
 }

@@ -62,7 +62,7 @@ public class GeometryQuiz {
         	
         	createTriangle(10,5);
         	
-        	System.out.println("What is the area of this triagnle?) ");
+        	System.out.println("What is the area of this triagnle? ");
             int area2 = s.nextInt();
             s.nextLine(); 
             
@@ -103,6 +103,7 @@ public class GeometryQuiz {
                
         }
         }
+    
  
         System.out.println("Here is your third question:");
         
@@ -178,4 +179,6 @@ public class GeometryQuiz {
             System.out.println();
         }
     }
+    
+    
 }

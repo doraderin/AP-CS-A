@@ -1,0 +1,29 @@
+//22.  A gymnast's score is determined by a panel of 6 judges who each decide a score between 0.0 and 10.0. The final score is determined by discarding the high and low scores, and averaging the remaining 4. Write a program GymnasticsScorer.java that takes 6 real command line inputs representing the 6 scores and prints their average, after throwing out the high and low scores.
+import java.util.Scanner;
+
+class QuarterbackRating {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        System.out.print("enter score 1: ");
+        double A = s.nextDouble();
+        System.out.print("enter score 2: ");
+        double B = s.nextDouble();
+        System.out.print("enter score 3: ");
+        double C = s.nextDouble();
+        System.out.print("enter score 4: ");
+        double D = s.nextDouble();
+        System.out.print("enter score 5: ");
+        double E = s.nextDouble();
+        
+        int W = (int) 250/3 * ((A / B) - 0.3);
+        int X = (int) 25/6 * ((C / B) - 3);
+        int Y = (int) 1000/3 * (D / B);
+        int Z = (int) 1250/3 * (0.095 - (E / B));
+        int sum = W+X+Y+Z;
+        
+        
+        
+        
+    }
+}

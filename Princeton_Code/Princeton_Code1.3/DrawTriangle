@@ -1,0 +1,22 @@
+//49. Write a program Triangle.java that takes a command-line argument N and prints an N-by-N triangular pattern like the one below.
+
+import java.util.Scanner;
+
+public class DrawTriangle {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter number ");
+        int N = s.nextInt();
+        
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("o");
+            }
+            for(int j = 0; j < N-i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+    }
+}

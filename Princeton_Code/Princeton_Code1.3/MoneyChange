@@ -1,0 +1,40 @@
+//48. Making change. Write a program that reads in a command line integer N (number of pennies) and prints the best way (fewest number of coins) to make change using US coins (quarters, dimes, nickels, and pennies only)
+
+import java.util.Scanner;
+
+class MoneyChange {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter number ");
+        int N = s.nextInt();
+        
+        int quarterCount = 0;
+        int dimeCount = 0;
+        int pennyCount = 0;
+        int num = N;
+        
+        if (N >= 25){
+            while(num >= 25){
+            num -= 25;
+            quarterCount ++;
+            }
+        }
+        if (N >= 10){
+            while(num >= 10){
+            num -= 10;
+            dimeCount ++;
+            }
+        }
+        if (N >= 1){
+            while(num >= 1){
+            num -= 1;
+            pennyCount ++;
+            }
+        }
+        
+        System.out.println("quarter : "+quarterCount);
+        System.out.println("dime : "+dimeCount);
+        System.out.println("penny : "+pennyCount);
+        
+    }
+}

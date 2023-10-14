@@ -1,0 +1,48 @@
+
+import java.util.Scanner;
+
+public class DrawTriangle {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter number ");
+        int num = s.nextInt();
+        
+        int reversed = 0;
+        int N = num;
+        
+        while (N > 0){ //reverses the number entered
+            int digit = N % 10;
+            reversed = reversed * 10 + digit;
+            N=N/10;
+        }
+        num += reversed; //adds the reversed verison of number to the originsl number
+        
+        int N2 = num;
+        int reversed2 = 0;
+        
+        while (N2 > 0){ //reverses the reversed number
+            int digit = N2 % 10;
+            reversed2 = reversed2 * 10 + digit;
+            N2=N2/10;
+        }
+        num += reversed2; //adds it to the number again
+        
+        int N3 = num;
+        int reversed3 = 0;
+        while (N3 > 0){ //reverses the number again
+            int digit = N3 % 10;
+            reversed3 = reversed3 * 10 + digit;
+            N3=N3/10;
+        }
+        
+        System.out.println("new number: "+reversed3+" ");
+        
+        if(num==reversed3){ //chekcs if the number that the reversed numbers has been added to is a palindrome (same backwards and forwards)
+            System.out.print(true);
+        }
+        else{
+            System.out.print(false);
+        }
+    
+    }
+}

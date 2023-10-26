@@ -1,0 +1,69 @@
+
+import java.util.Scanner;
+
+class Digits {
+    public static void main(String[] args) {
+       Scanner s = new Scanner(System.in);
+       System.out.print("enter number 1: ");
+       int num1 = s.nextInt();
+       System.out.print("enter number 2: ");
+       int num2 = s.nextInt();
+       System.out.print("enter number 3: ");
+       int num3 = s.nextInt();
+       System.out.print("enter number 4: ");
+       int num4 = s.nextInt();
+       System.out.print("enter number 5: ");
+       int num5 = s.nextInt();
+       
+       //question1
+       int count1 = 0;
+       while(num1>0){
+           num1=num1/10;
+           count1++;
+       }
+       System.out.println("number of digits in number 1: "+count1);
+       
+       //question2
+       int sum2 = 0;
+       while(num2>0){
+           sum2 += num2%10;
+           num2 = num2 / 10;
+       }
+       System.out.println("sum of the number of digits in number 2: "+sum2);
+       
+       //question3
+       int digits3 = 0;
+       int sum3 = 0;
+       int num3F = num3;
+       
+       while(num3F>0){
+           num3F=num3F/10;
+           digits3++;
+       }
+       while (num3>0){
+           if(digits3%2 == 0){
+               num3 = num3/10;
+           }
+           if(digits3%2 != 0){
+               sum3 += num3%10;
+               num3 = num3/10;
+           }
+           digits3--;
+       }
+       System.out.println("the sum of digits in odd places in number 3: "+sum3);
+
+
+       //question4
+       int count4 = 0;
+       while (num4>0){
+          if (num4%10 == 4){
+              count4++;
+          }
+          num4 = num4/10;
+       }
+       System.out.println("the number of times '4' appears in number 4: "+count4);
+
+
+
+    }
+}

@@ -1,0 +1,27 @@
+
+** CONSTRUCTORS **
+- Constructors must have the same name as the class
+- Constructors have no return type
+
+If there is no constructor in a class:
+- 0 for int and double, false for boolean, and null for all reference types 
+- Constructor is needed if you need to initialize instance variables of your class
+
+
+
+** POSTCONDITION/PRECONDITION **
+Precondition = condition that must be true for your method code to work (ex: assumption that the parameters have values and are not null)
+Postcondition = describe the outcome of running the method (ex: what is being returned or the changes to the instance variables)
+- Preconditions should be about the parameters of the constructor
+- It is reasonable to set int parameter values to positive and for strings to not be empty
+
+Example: 
+Preconditions for “Order Food”: Customer enters restaurant. Staff is ready to take the order.
+Postconditions for “Order Food”: Customer orders the food. Staff takes the order.
+
+
+
+** ACESSORS/GETTERS **
+getter methods = public method that takes no arguments and returns the value of the private instance variable
+- used if you want code outside the class to be able to access the value of an instance variable
+- return type like int should be written before the method name

@@ -25,3 +25,51 @@ Postconditions for “Order Food”: Customer orders the food. Staff takes the o
 getter methods = public method that takes no arguments and returns the value of the private instance variable
 - used if you want code outside the class to be able to access the value of an instance variable
 - return type like int should be written before the method name
+- accessor methods should be public so they can be accessed from outside the class
+
+toString method = called automatically by Java in a number of situations when it needs to convert an object to a String
+    If System.out.print or System.out.println is passed an object, that object’s toString method is called, and the returned String is printed.
+    (use + when return)
+
+
+
+
+
+** MUTATORS / SETTERS **
+- it's a void method
+- it takes a single argument of the same type as the instance variable to be set
+- used if we want to allow code outside the class to change the value of an instance variable
+
+
+
+
+
+** WRITING CLASSES **
+three steps to creating and calling a method:
+
+1) 
+Object of the Class: Declare an object of your class in the main method or from outside the class.
+Step 1: declare an object in main or from outside the class
+Classname objectName = new Classname();
+
+2)
+Method Call: whenever you want to use the method, call objectName.methodName();
+Step 2: call the object's method:
+objectName.methodName(); 
+
+3)
+Method Definition: write the method’s header and body code like below:
+// Step 3: Define the method in the class
+// method header
+public void methodName()
+{
+      // method body for the code
+}
+
+
+
+** STATIC VARIABLES AND METHODS **
+- Static variables and methods belong to a class and are called with the Class Name rather than using object variables, like ClassName.methodName();
+- There is only one copy of a static variable or method for the whole class. For example, the main method is static because there should only be 1 main method.
+- Static methods can be public or private.
+- The static keyword is placed right after the public/private modifier and right before the type of variables and methods in their declarations.

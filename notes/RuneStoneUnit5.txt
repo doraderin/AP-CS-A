@@ -35,7 +35,7 @@ toString method = called automatically by Java in a number of situations when it
 
 
 
-** MUTATORS / SETTERS **
+** SETTERS **
 - it's a void method
 - it takes a single argument of the same type as the instance variable to be set
 - used if we want to allow code outside the class to change the value of an instance variable

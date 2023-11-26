@@ -1,0 +1,21 @@
+
+creating an array: (data type + [] + name)
+int[] scores;
+
+creating an array with certain number of elements: (this array will have 5)
+int[] scores = new int[5];
+
+creating an array and giving values:
+int[ ] scores = {99,98,98,88,68};
+
+arrayName.length will give us the number of elements in array, the example above has length 5
+scores.length - 1 can be used to access the last elemen of an array
+
+scores[0] = 70; can be used to change the value at position 0 (first element)
+
+
+defaults:
+- 0 for elements of type int
+- 0.0 for elements of type double
+- false for elements of type boolean
+- null for elements of type String

@@ -1,0 +1,37 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+
+class Game {
+    
+    //method to check is answer is correct, returns true if correct and false if not
+    public boolean word (String w, int x1, int x2, String ans){
+        String correct = w.substring(x1,x2);
+        if (ans.equals(correct) != true){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        //takes the needed variables as input from user
+        System.out.println("enter the word: ");
+        String word = s.nextLine();
+        System.out.print("enter first num: ");
+        int nr1 = s.nextInt();
+        System.out.print("enter second num: ");
+        int nr2 = s.nextInt();
+        s.nextLine();
+        System.out.print("what is "+word+".substring("+nr1+","+nr2+")? ");
+        String answer = s.nextLine();
+        
+        //creates g1 object and calls the word method
+        Game g1 = new Game();
+        System.out.print(g1.word(word,nr1,nr2,answer));
+        
+        
+    }
+}

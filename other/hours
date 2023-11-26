@@ -1,0 +1,18 @@
+public class hours {
+    public static void main(String args[]) {
+      for (int i=2;i>=0;i--){ //for loop to print for 12midnight and 12 noon seperatly
+          if(i==1){
+              System.out.println(12+" midnight");
+              for(int k=1;k<=11;k++){ //for loop to print all am hours 1 to 11
+                  System.out.println(k+" am");
+              }
+          }
+          if(i==0){
+              System.out.println(12+"noon");
+              for(int j = 1; j<=11;j++){ //for loop to print all pm hours 1 to 11
+                  System.out.println(j+ "pm");
+              }
+          }
+      }
+    }
+}

@@ -1,0 +1,14 @@
+class arrayCreation {
+    public static void main(String[] args) {
+        int[] scores = {65, 56, 23, 67, 78};
+        scores[2] = 34;
+        System.out.println(scores[2]); //prints 34
+
+        int[] highScores;
+        highScores = new int[5]; //creates array with 5 elements
+        highScores[3] = 98; //changes value of 3rd element to 98 from default 0
+        System.out.println("length of highscores: "+highScores.length); //prints 5
+        System.out.println(highScores[3]); //prints 98
+        System.out.println(highScores[0]); //prints 0 (default value)
+    }
+}

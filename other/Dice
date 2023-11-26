@@ -1,0 +1,31 @@
+//bir zar 20 kere atilcak (5 set). her 20likten en yuksek zar degeri bir listeye eklenecek ve sonunda her 20lik setten en yuksek zar degeri print edilcek
+
+class Dice {
+    public static void main(String[] args) {
+        
+        int dices[];
+        dices = new int[5];
+        
+        for(int round=0; round < 5; round++){
+            
+            int biggest = 0;
+            int count = 0;
+            
+            while (count < 20){
+                double rnd = Math.random();
+                int num = (int) (rnd * 6) + 1;
+                
+                if (num > biggest){
+                    biggest = num;
+                }
+                count++;
+                dices[round] = biggest;
+            }
+        }
+        System.out.println("highest dice value of round 1: "+dices[0]);
+        System.out.println("highest dice value of round 2: "+dices[1]);
+        System.out.println("highest dice value of round 3: "+dices[2]);
+        System.out.println("highest dice value of round 4: "+dices[3]);
+        System.out.println("highest dice value of round 5: "+dices[4]);
+    }
+}

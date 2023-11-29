@@ -1,0 +1,12 @@
+
+
+class Traversing {
+    public static void main(String[] args) {
+        
+        int[] scores = { 10, 9, 8, 11};
+        for (int i = 0; i < scores.length; i++) //goes through all the elemnts in the array and prints them out
+        {
+            System.out.println(scores[i]);
+        }
+    }
+}

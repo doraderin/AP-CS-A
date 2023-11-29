@@ -16,7 +16,9 @@ public class NextPrime {
             nrCalc = nrCalc / 10;
             countDigit++;
         }
-        
+        if(countDigit == 3){
+            
+        }
         
         if(countDigit == 2){
             int tensDigit = (nr / 10) % 10; // Get the tens digit

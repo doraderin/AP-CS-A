@@ -1,0 +1,25 @@
+public class countVowel{
+    
+    private String word;
+    
+    public countVowel(String word){
+        this.word = word;
+    }
+    
+    public int Count(){
+        int count = 0;
+        for(int i = word.length(); i > 0; i--){
+            if(word.substring(i-1,i).equals("a")|| word.substring(i-1,i).equals("e")|| word.substring(i-1,i).equals("o")|| word.substring(i-1,i).equals("i")|| word.substring(i-1,i).equals("u")){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    
+    public static void main(String[] args){
+        countVowel w1 = new countVowel("apple");
+        System.out.println(w1.Count());
+
+    }
+}

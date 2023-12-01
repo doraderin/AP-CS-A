@@ -1,0 +1,17 @@
+//prints even values of "values" array
+
+public class foreach
+{
+    public static void main(String[] args)
+    {
+        int[] values = {6, 2, 1, 7, 12, 5};
+        for (int v : values)
+        {
+            if (v % 2 == 0)
+            {
+                System.out.println(v + " is even!");
+            }
+        }
+    }
+}
+

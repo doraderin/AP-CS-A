@@ -1,0 +1,17 @@
+public class MinMax
+{
+    public static void main(String[] args)
+    {
+        int[] values = {6, 2, 1, 7, 12, 5};
+        int max = values[0]; 
+        for (int val : values)
+        {
+            if (val > max) 
+            {
+                max = val;
+            }
+        }
+        System.out.println("Max is " + max);
+    }
+}
+

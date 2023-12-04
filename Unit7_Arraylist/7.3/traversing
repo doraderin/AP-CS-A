@@ -27,7 +27,7 @@ public class traversing
         int total2 = 1;
         for (Integer value : list2)
         {
-            total2 += value;
+            total2 *= value;
         }
         System.out.println("product of all elements in array: " + total);
 

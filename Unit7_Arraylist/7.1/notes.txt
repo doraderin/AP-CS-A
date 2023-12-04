@@ -1,0 +1,9 @@
+NEEDS import java.util.*;
+
+Declaring an Arraylist:
+ArrayList<Type> name = new ArrayList<Type>();
+
+** ArrayLists can only hold objects like String and the wrapper classes Integer and Double. They cannot hold primitive types like int, double, etc.
+
+You can get the number of items in a ArrayList using the size() method
+You can’t get the size of a ArrayList that is currently set to null, you will get a NullPointerException instead

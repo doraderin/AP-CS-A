@@ -1,0 +1,27 @@
+// size()
+// add(obj)
+// add(index,obj)
+
+import java.util.ArrayList;
+
+public class sizeAdd {
+    public static void main(String[] args) {
+        
+        ArrayList<Integer> list = new ArrayList<>(); //creates new arraylist
+
+        //adds these values to the arraylist with .add() method
+        list.add(10);
+        list.add(20);
+        list.add(30);
+
+        //gets the size of arraylist with .size() method
+        int listSize = list.size();
+
+        System.out.println("the size of the ArrayList is: " + listSize);
+
+        // second add method, this will put 5 at index 1
+        list.add(1,5);
+
+        System.out.println("the updated ArrayList is: " +  list);
+    }
+}

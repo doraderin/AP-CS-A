@@ -1,0 +1,21 @@
+//listName.get(index)
+//listName.set(index,obj)
+
+import java.util.*; 
+
+public class listGetSet
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> numList = new ArrayList<Integer>();
+        numList.add(6);
+        numList.add(2);
+        numList.add(9);
+        System.out.println("original list: "+numList);
+        System.out.println("first number in list: "+numList.get(0));
+        System.out.println("second number in list"+numList.get(1));
+        numList.set(1, 8); //sets index 1 to 8
+        System.out.println("changed list: "+numList);
+    }
+}
+

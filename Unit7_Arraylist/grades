@@ -1,0 +1,80 @@
+
+import java.util.*;
+
+public class gradesArrayList {
+	
+	ArrayList<Integer> gList = new ArrayList<>();
+	
+	public gradesArrayList(ArrayList<Integer> gList) {
+		this.gList = gList;
+	}
+	
+	public ArrayList<Integer> Add(int numAdd){
+		gList.add(numAdd);
+		return gList;
+	}
+	public ArrayList<Integer> Remove(int index){
+		gList.remove(index);
+		return gList;
+	}
+	public double Average() {
+		int total = 0;
+        for (Integer value : gList)
+        {
+            total += value;
+        }
+        double avg = total / gList.size();
+        
+        return avg;
+         
+	}
+	
+    public static void main(String[] args) {
+    	
+ 
+  	     //creates Arraylist, adds values to it
+    	 ArrayList<Integer> gList = new ArrayList<>();
+         gList.add(10);
+         gList.add(20);
+         gList.add(30);
+         gList.add(40);
+
+         //creates instance of class
+         gradesArrayList g1 = new gradesArrayList(gList);   
+         
+         //gets input (yes or no)
+         Scanner s = new Scanner(System.in);
+         System.out.println("Grades before removal: " + gList);
+         System.out.println("would you like to modify? (type in: yes / no) ");
+         String ansYN = s.nextLine();
+         
+         if(ansYN.equals("yes")) {
+        	 System.out.println("type in: add, remove");
+        	 String ans = s.nextLine();
+        	 
+        	 if (ans.equals("add")) {
+        		 System.out.println("enter the grade you want to add");
+        		 int addGrade = s.nextInt();
+        		 g1.Add(addGrade);
+;        	 }
+        	 
+        	 if (ans.equals("remove")) {
+        		 System.out.println("enter the position of the grade you want to remove (must be between 0 and "+(gList.size()-1)+")");
+        		 int removeGrade = s.nextInt();
+        		 g1.Remove(removeGrade);
+        		 
+        	 }
+         }
+         else if(ansYN.equals("no")) {
+        	return;
+        }
+         
+        System.out.print("the modified grades list: "+gList);
+        
+        double avg = g1.Average();
+        System.out.println("the class average is"+avg);
+        
+
+    
+    }
+}

@@ -1,0 +1,17 @@
+// remove(index), decreasse the size of the ArrayList by 1
+
+import java.util.*; 
+
+public class remove
+{
+    public static void main(String[] arts)
+    {
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        System.out.println("original list: "+list1);
+        list1.remove(1);
+        System.out.println("list after removal: "+list1);
+    }
+}

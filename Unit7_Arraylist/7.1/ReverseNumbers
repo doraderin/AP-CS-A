@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class ReverseNums {
+    
+    //private variable of the class
+    private ArrayList<Integer> list = new ArrayList<Integer>();
+
+    //void method with argument int num 
+    public void Digits(int num) {
+        
+        while (num > 0) {
+            list.add(num % 10); //adds the last number of "num" to the Arraylist
+            num /= 10; //removes the last number of num
+        }
+    }
+
+    public static void main(String[] args) {
+      
+        ReverseNums d1 = new ReverseNums(); //creates an instance "d1" of class ReverseNums
+        d1.Digits(154); //calls the Digits method
+
+        System.out.print(d1.list); //prints the Arraylist
+    }
+}

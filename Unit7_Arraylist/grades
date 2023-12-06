@@ -73,8 +73,6 @@ public class gradesArrayList {
         
         double avg = g1.Average();
         System.out.println("the class average is"+avg);
-        
-
-    
+ 
     }
 }

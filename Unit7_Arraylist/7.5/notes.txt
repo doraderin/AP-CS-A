@@ -1,0 +1,5 @@
+
+
+- Sequential or Linear search typically starts at the first element in an array or ArrayList and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1.
+- Binary search can only be used on data that has been sorted or stored in order. It checks the middle of the data to see if that middle value is less than, equal, or greater than the desired value and then based on the results of that it narrows the search. It cuts the search space in half each time.  
+    Binary search is faster but can only be used if the array/Arraylist is sorted in order

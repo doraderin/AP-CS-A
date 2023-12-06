@@ -1,0 +1,16 @@
+Selection Sort - Select the smallest item from the current location on to the end of the array and swap it with the value at the current position. Do this from index 0 to the array length - 2. You don’t have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.
+- a nested for loop with the outer loop starting at 0 and ending when the index reaches length - 1 
+- the index of the smallest value should start at the outer loop index 
+- the inner loop should start at the outer loop index + 1 and loop through the whole array 
+- if the value in the array at the index of the inner loop is less than the value at the smallest index then set the smallest index to the index of the inner loop 
+- swap the value at the outer loop index and the smallest value (the one at the smallest value index) (see lines 17-19)
+
+
+Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right. Start at index 1 and loop through the entire array.
+- an outer for loop that starts at 1 and loops through the entire array 
+- storing the element value at the outer loop index in temp 
+- setting the possible index to the outer loop index 
+- an inner while loop that loops while the possible index is greater than 0 and the value in temp is less than the value at the possible index minus one 
+- set the value at the possible index to the one to the left of it (the one at possible index minus one) 
+- decrement the possible index (subtract one from it) 
+- when the while loop ends set the value at the possible index to temp 

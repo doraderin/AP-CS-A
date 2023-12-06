@@ -1,0 +1,75 @@
+package Arrays;
+import java.util.ArrayList;
+
+public class searchCompare {
+	
+	private ArrayList<String> dictionary = new ArrayList<String>();
+	
+	public searchCompare(ArrayList<String> dictionary) {
+		this.dictionary = dictionary;
+	}
+	
+	public int linearSearch(String word)
+    {
+        int count = 0;
+        for (int i = 0; i < dictionary.size(); i++){
+            if ((dictionary.get(i)).equals(word)){
+                count++;
+                break;
+            }
+            else{
+            count++;}
+        }
+        return count;
+    }
+
+	
+	public int binarySearch(String word)
+    {
+        int count = 0;
+        int start = 0;
+        int end = dictionary.size()-1;
+        while (start <= end){
+            int middle = (start + end) / 2;
+            if ((dictionary.get(middle)).equals(word)){
+                count++;
+                break;
+            }
+            else if ((dictionary.get(middle)).compareTo(word) < 0){
+                start = middle + 1;
+                count++;
+            }
+            else if ((dictionary.get(middle)).compareTo(word) > 0){
+                end = middle - 1;
+                count++;
+            }
+            else{
+                return -1;
+            }
+        }
+        return count;
+    }
+	
+	public static void main(String[] args) 
+    {
+		ArrayList<String> dictionary = new ArrayList<String>();
+		dictionary.add("apple");
+		dictionary.add("banana");
+		dictionary.add("cat");
+		dictionary.add("dog");
+		dictionary.add("ekmek");
+		dictionary.add("fatura");
+		dictionary.add("garaj");
+		dictionary.add("hello");
+		
+		searchCompare s1 = new searchCompare(dictionary);
+		int searchBinary = s1.binarySearch("fatura");
+		System.out.println("the binary search for the first word was "+searchBinary);
+		
+		int searchLinear = s1.linearSearch("fatura");
+		System.out.println("the linear search for the first word was "+searchLinear);
+
+		
+    }
+
+}

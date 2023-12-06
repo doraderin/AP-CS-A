@@ -1,0 +1,50 @@
+//CALISMIYO UZERINDEN GEC!!!!!!
+
+import java.util.ArrayList;
+
+class Combine {
+    private ArrayList<Combine> NewList = new ArrayList<Combine>();
+    private String name;
+    private int num;
+    
+    public Combine(String name){
+        this.name = name;
+    }
+    public Combine(int num){
+        this.num = num;
+    }
+    
+    
+
+}
+
+class Main {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Barb");
+        names.add("Steph");
+        names.add("Tara");
+        names.add("Greg");
+        names.add("Barb");
+        names.add("Jon");
+        System.out.println("names list: "+names);
+        
+        ArrayList<Integer> ages = new ArrayList<Integer>();
+        ArrayList<Combine> NewList = new ArrayList<Combine>();
+        
+        for (int i = 0; i < names.size(); i++){
+            String y = names.get(i);
+            NewList.add(new Combine(y));
+        }
+        
+        for (int i = 0; i < 10; i++) {
+          int x = (int)(Math.random() * 100);
+          ages.add(x);
+          NewList.add(new Combine(x));
+        }
+        
+      System.out.println("names list: "+ages);
+      System.out.println("combined list: "+NewList);
+      
+    }
+}

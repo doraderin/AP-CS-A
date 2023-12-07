@@ -19,7 +19,7 @@ public class insertionSort
 
     public static void main(String[] args)
     {
-        int[] arr1 = {3, 86, -20, 14, 40};
+        int[] arr1 = {2, 7, 9, 6, -3};
         System.out.println(Arrays.toString(arr1));
         insertionSort(arr1);
         System.out.println(Arrays.toString(arr1));

@@ -68,8 +68,7 @@ public class searchCompare {
 		
 		int searchLinear = s1.linearSearch("fatura");
 		System.out.println("the linear search for the first word was "+searchLinear);
-
-		
+	
     }
 
 }

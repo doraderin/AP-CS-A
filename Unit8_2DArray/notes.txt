@@ -1,0 +1,37 @@
+** 8.1 **
+
+creating a 2D array:
+    int[][] ticketInfo --> null
+    ticketInfo = new int [3][4] --> (int[numRows][numCols]) 
+
+setting values:
+    ticketInfo[2][3] = 15 (sets the value for 1st row and 2nd column)
+
+Initiliazing array from start:
+    int[][] ticketInfo = { {25,20,25}, {25,20,25} }
+
+    String[][] seatingInfo =
+        {
+            {"Jamal", "Maria"},
+            {"Jake", "Suzy"},
+            {"Emma", "Luke"},
+            {"a", "b"}
+        };
+
+
+
+** 8.2 Traversing 2D arrays **
+
+Getting the Number of Rows and Columns
+    ticketInfo.length --> returns the number of rows
+    ticketInfo[0].length --> returns the number of columns   
+
+Enhanced for-each loop
+    String[][] array;
+    for (String[] innerArray : array)
+    {
+        for (String val : innerArray)
+        {
+            System.out.println(val);
+        }
+    }

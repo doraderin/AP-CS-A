@@ -1,0 +1,36 @@
+import java.util.*;
+
+class ItemForSale
+{
+    private double price;
+    private boolean available;
+}
+
+class Movie extends ItemForSale
+{
+    private String movieName;
+    private int releaseYear;
+}
+
+class Book extends ItemForSale
+{
+    private String bookName;
+    private int releaseYear;
+}
+
+class Author
+{
+    private String name;
+    private int age;
+}
+
+public class Store
+{
+    public static void main(String[] args)
+    {
+        Store s = new Store();
+        Book b = new Book();
+        System.out.println(b instanceof ItemForSale);
+    }
+}
+

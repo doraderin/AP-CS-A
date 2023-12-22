@@ -6,7 +6,7 @@ class ItemForSale
     private boolean available;
 }
 
-class Movie extends ItemForSale
+class Movie extends ItemForSale //inherits ItemForSale attributes
 {
     private String movieName;
     private int releaseYear;
@@ -28,6 +28,8 @@ public class Store
 {
     public static void main(String[] args)
     {
+        private ArrayList<ItemForSale> inventory;
+        
         Store s = new Store();
         Book b = new Book();
         System.out.println(b instanceof ItemForSale);

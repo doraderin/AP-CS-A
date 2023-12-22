@@ -1,5 +1,5 @@
-The class being inherited from = the parent class / superclass
-The class that is inheriting = the child class / subclass
+The class being inherited from = parent class / superclass
+The class that is inheriting = child class / subclass
 
 Subclass extends Superclass
     public class Car extends Vehicle
@@ -26,7 +26,7 @@ is-a
 
 has-a 
     = one class has another class as a part or component
-    ex: car class, engine class, "car is an engine", Car contains an instance of the Engine class
+    ex: car class, engine class, "car has an engine", Car contains an instance of the Engine class
 
     class Engine {
     // properties and methods

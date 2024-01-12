@@ -1,0 +1,62 @@
+public class Mall{
+    private int numOfPeople;
+    private String Mallname;
+    private boolean open;
+    
+    public Mall(int n, String mn, boolean o){
+        numOfPeople = n;
+        Mallname = mn;
+        open = o;
+    }
+    
+    public String toString(){
+        return "name of mall: " + name + " people currently in mall: " + numOfPeople + "is it open: " + open;
+    }
+    
+    public int afterConstruction(int area){
+        return area*2;
+    }
+}
+
+public class shopMarket extends Mall{
+    private int shopAreaMarket;
+    private boolean hasFruit;
+    
+    public shopMarket(int n, String name, boolean o, int area, boolean fruit){
+        super(n,name,o);
+        shopAreaMarket = area;
+        hasFruit = fruit;
+    }
+}
+
+public class shopClothing extends Mall{
+    private int shopAreaClothing;
+    private boolean hasTshirt;
+    
+    public shopClothing(int n, String name, boolean o, int area, boolean shirt){
+        super(n,name,o);
+        shopAreaClothing = area;
+        hasTshirt = shirt;
+    }
+}
+
+public class shopPharmacy extends Mall{
+    private int shopAreaPharmacy;
+    private boolean hasMedicine;
+    
+    public shopClothing(int n, String name, boolean o, int area, boolean med){
+        super(n,name,o);
+        shopAreaPharmacy = area;
+        hasMedicine = med;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Mall s1 = new shopMarket(10,"migros", true, 25, false);
+        System.out.println("the shop's area after construction is "+s1.afterConstruction(25));
+        
+        Mall s2 = new Mall(100, "cevahir", true);
+        System.out.println(s2);
+    }
+}

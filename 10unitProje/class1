@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSAproject
+{
+    public class School
+    {
+        public string lastName { get; set; }
+        public int ID { get; set; }
+        public List<String> lessons { get; set; }
+
+        public School(string l, int d)
+        {
+            lastName = l;
+            ID = d;
+        }
+    }
+
+    public class middleSchool : School
+    {
+        public middleSchool(string l, int d)
+            : base(l,d)
+        {
+            base.lessons = new List<string> { "turkce", "matematik" };
+        }
+    }
+    public class highSchool : School
+    {
+        public highSchool(string l, int d)
+            : base(l, d)
+        {
+            base.lessons = new List<string> { "turkce", "matematik", "fen" };
+        }
+    }
+}

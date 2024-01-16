@@ -1,0 +1,130 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CSAproject
+{
+    public partial class Form1 : Form
+    {
+        public List<int> grades ;
+        bool ms;
+        School s1;
+
+        public Form1()
+        {
+            InitializeComponent();
+            panel1.Location = new Point(0, 0);
+        }
+
+        private void hsButton_Click(object sender, EventArgs e)
+        {
+            ms = false;
+            hmsCommon();
+        }
+
+        private void msButton_Click(object sender, EventArgs e)
+        {
+            ms = true;
+            hmsCommon();
+        }
+
+        private void hmsCommon()
+        {
+            hsButton.Visible = false;
+            msButton.Visible = false;
+            label1.Text = "adinizi ve ID'nizi girin";
+            nameBox.Visible = true;
+            IDBox.Visible = true;
+        }
+
+        private void inputs_TextChanged(object sender, EventArgs e)
+        {
+            okButton.Visible = IDBox.Text != "" && nameBox.Text != "";
+        }
+
+
+        private void generateScreen(bool ms)
+        {
+            if (ms)
+            {
+                s1 = new middleSchool(nameBox.Text, int.Parse(IDBox.Text));
+            }
+            else
+            {
+                s1 = new highSchool(nameBox.Text, int.Parse(IDBox.Text));
+            }
+           
+            int y = 0, startY=140, multpY=40;
+
+            foreach (string lesson in s1.lessons)
+            {
+                Label lblDers = new Label();
+                lblDers.Location = new Point(52, y * multpY + startY);
+                lblDers.Size = new Size(72, 17);
+                lblDers.Text = lesson;
+                this.Controls.Add(lblDers);
+
+                Label lblAvg = new Label();
+                lblAvg.Location = new Point(329, y * multpY + startY);
+                lblAvg.Size = new Size(28, 17);
+                lblAvg.Text = "0";
+                lblAvg.Name = "Avg" + y;
+                this.Controls.Add(lblAvg);
+
+                TextBox tbSozlu = new TextBox();
+                tbSozlu.Location = new Point(153, y * multpY + startY);
+                tbSozlu.Size = new Size(53, 22);
+                tbSozlu.Name = "Sozlu" + y;
+                this.Controls.Add(tbSozlu);
+
+                TextBox tbSinav = new TextBox();
+                tbSinav.Location = new Point(243, y * multpY + startY);
+                tbSinav.Size = new Size(53, 22);
+                tbSinav.Name = "Sinav" + y;
+                this.Controls.Add(tbSinav);
+
+                y++;
+            }
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            label1.Visible = false;
+            nameBox.Visible = false;
+            IDBox.Visible = false;
+            okButton.Visible = false;
+            generateScreen(ms);
+            welcomeT.Text = "Hosgeldin " + s1.lastName;
+        }
+
+        private void CalculateButton_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            for (int i = 0; i < s1.lessons.Count; i++) //s1.size gibi
+            {
+                TextBox tb1 = (TextBox)this.Controls["Sozlu" + i];
+                TextBox tb2 = (TextBox)this.Controls["Sinav" + i];
+                int avg = (int.Parse(tb1.Text) + int.Parse(tb2.Text)) / 2;
+                this.Controls["Avg" + i].Text = Convert.ToString(avg);
+                sum += avg;
+            }
+            int total = sum / s1.lessons.Count;
+            totalAvg.Text = Convert.ToString(total);
+
+            if (total >= 90)
+            {
+                MessageBox.Show("TAKDIRRR");
+            }
+
+
+        }
+
+    }
+}

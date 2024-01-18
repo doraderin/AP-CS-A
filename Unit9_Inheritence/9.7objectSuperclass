@@ -1,0 +1,26 @@
+//Object class is the superclass of all other classes in Java, the root class for all classes
+
+class Animal {
+    private String name;
+    private int age;
+
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return "animal name = " + name + ", age = " + age;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal("Buddy", 3);
+
+        System.out.println(myAnimal.toString());
+
+        String animalString = "my animal: " + myAnimal;
+        System.out.println(animalString);
+    }
+}

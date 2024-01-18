@@ -1,0 +1,26 @@
+//to refer to the superclass
+
+class Animal {
+    String sound = "animal sound";
+
+    void makeSound() {
+        System.out.println(sound);
+    }
+}
+
+class Dog extends Animal {
+    String sound = "Bark";
+
+    void makeSound() {
+        super.makeSound();
+        System.out.println("dog sound: " + sound);
+        System.out.println("animal sound: " + super.sound);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Dog d1 = new Dog();
+        d1.makeSound();
+    }
+}

@@ -1,0 +1,10 @@
+
+public class MainTest {
+
+	public static void main(String[] args) {
+		Pet p1 = new Dog("mammal","bib","pomeryan");
+		System.out.println(p1);
+
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class Cat extends Pet{
+	private String furColor;
+	
+	public Cat() {
+		furColor = "white";
+	}
+	
+	public Dog(String t, String n, String c) {
+		super(t,n);
+		furColor = c;
+	}
+	
+	public String toString() {
+		return super.toString()+" and the fur color is is "+furColor;
+	}
+}

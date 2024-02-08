@@ -1,0 +1,18 @@
+
+
+public class Bird extends Pet{
+	private int wingLength;
+	
+	public Cat() {
+		furColor = 18;
+	}
+	
+	public Dog(String t, String n, int w) {
+		super(t,n);
+		wingLength = w;
+	}
+	
+	public String toString() {
+		return super.toString()+" and the length of the wings are "+wingLength;
+	}
+}

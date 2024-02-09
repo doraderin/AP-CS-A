@@ -1,0 +1,56 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class chiliPeppers {
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        ArrayList<String> pepperList = new ArrayList<String>(); //arraylist to collect peppernames
+        
+        System.out.println("how many peppers will you add: ");
+        int nrPepper = s.nextInt(); //takes input from user for number of peppers
+        
+        s.nextLine();
+        
+        for(int i = 1; i <= nrPepper; i++){ //for loop to get input for each pepper name
+            System.out.println("enter pepper "+i+": ");
+            String pepperName = s.nextLine();
+            pepperList.add(pepperName); //adds each pepper user enters into Arraylist pepperlist
+        }
+        
+        int pepperPuan = pepperCalculator(pepperList); //calls the pepperCalculator method with pepperList as parameter
+        System.out.print(pepperPuan);
+        
+    }
+    
+    public static int pepperCalculator(ArrayList<String> pList){
+            int puan = 0; 
+            for(String i : pList){ //for loop to go through each pepper in the arraylist and check what kind of pepper it is, adds the puan correspodning to that pepper
+                if (i.equals("Poblano")){ 
+                    puan += 1500;
+                }
+                else if (i.equals("Mirasol")){
+                    puan += 6000;
+                }
+                else if (i.equals("Serrano")){
+                    puan += 15500;
+                }
+                else if (i.equals("Cayenne")){
+                    puan += 40000;
+                }
+                else if (i.equals("Thai")){
+                    puan += 75000;
+                }
+                else if (i.equals("Habanero")){
+                    puan += 125000;
+                }
+                else {
+                    System.out.print("enter valid pepper names!");
+                }
+                
+            }
+            return puan;
+        }
+}

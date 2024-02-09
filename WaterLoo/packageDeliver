@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+class packageDeliver {
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("enter nr of packages delivered: ");
+        int packages = s.nextInt(); //gets input from user for nr of packages
+        
+        System.out.println("enter nr of collisions: ");
+        int collision = s.nextInt(); //gets input from user for nr of collisions
+        
+        int point = (packages*50) - (collision*10); //calculates points by giving 50 points for each package and decreasing 10 points for each collision
+        
+        if (packages>collision){ //checks if there are more packages than collisions, gives an extra 500 points if its true
+            point+=500;
+        }
+        
+        System.out.print(point); //prints the points
+    }
+}

@@ -1,0 +1,75 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class eventOrganize {
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        ArrayList<String> availability = new ArrayList<String>(); //arraylist to store "y." (avaliable/notavaliable) of each person
+        
+        System.out.println("how many people are interested in event: ");
+        int nrPeople = s.nextInt(); //takes nr of people so we know how many times we have to ask user avalibility
+        
+        s.nextLine();
+        
+        for(int i = 1; i <= nrPeople; i++){ //takes avaliablty of each user and stores it in arraylist
+            System.out.print("person "+i+"'s availability: ");
+            String a = s.nextLine();
+            availability.add(a);
+        }
+        
+        int organizeDay = dayCalculator(availability); //calls dayCalculator method with parameter availability
+        System.out.print(organizeDay); //prints int value that is returned by method
+
+    }
+    
+    public static int dayCalculator(ArrayList<String> aList){
+            int day1 = 0; //each day has value of 0 in the beggining, they will be incremented for each time a person is avaliable on that particular day
+            int day2 = 0;
+            int day3 = 0;
+            int day4 = 0;
+            int day5 = 0;
+            int dayAvaliable = 0; //day thatll be returned as the day thats avaliable for everyone
+            
+            for(String i : aList){ //checks each value in Arraylist aList
+                for(int j = 0; j < 5; j++){ //for loop 5 times bcs we are checking avaliablty for 5 days
+                    if ((i.substring(j,j+1)).equals("Y")){ //checks each element of i (ex: checks all letters of YY.Y.)
+                        if (j==0){ // j corresponds to day number, starting with j=0 being day1
+                            day1++;
+                        }
+                        else if(j==1){
+                            day2++;
+                        }
+                        else if(j==2){
+                            day3++;
+                        }
+                        else if(j==3){
+                            day4++;
+                        }
+                        else if(j==4){
+                            day5++;
+                        }
+                    }
+                }
+            }
+            
+            if(day1 == aList.size()){ //if a day is equal to the number of elements in arraylist itll be the day that is avaliable for each user
+                dayAvaliable = 1;
+            }
+            else if (day2 == aList.size()){
+                dayAvaliable = 2;
+            }
+            else if (day3 == aList.size()){
+                dayAvaliable = 3;
+            }
+            else if (day4 == aList.size()){
+                dayAvaliable = 4;
+            }
+            else if (day5 == aList.size()){
+                dayAvaliable = 5;
+            }
+            
+            return dayAvaliable; //returns the day that is avaliable for all
+        }
+    }

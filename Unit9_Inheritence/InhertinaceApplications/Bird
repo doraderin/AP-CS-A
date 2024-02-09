@@ -3,11 +3,11 @@
 public class Bird extends Pet{
 	private int wingLength;
 	
-	public Cat() {
+	public Bird() {
 		furColor = 18;
 	}
 	
-	public Dog(String t, String n, int w) {
+	public Bird(String t, String n, int w) {
 		super(t,n);
 		wingLength = w;
 	}

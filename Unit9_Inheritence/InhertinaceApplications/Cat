@@ -6,7 +6,7 @@ public class Cat extends Pet{
 		furColor = "white";
 	}
 	
-	public Dog(String t, String n, String c) {
+	public Cat(String t, String n, String c) {
 		super(t,n);
 		furColor = c;
 	}

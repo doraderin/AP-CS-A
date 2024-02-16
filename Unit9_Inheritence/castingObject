@@ -1,0 +1,44 @@
+public class Furniture
+{
+    private String material;
+    private int cost;
+
+    public Furniture(String material, int cost)
+    {
+        this.material = material;
+        this.cost = cost;
+    }
+
+    public String getMaterial()
+    {
+        return this.material;
+    }
+
+    public int getCost()
+    {
+        return this.cost;
+    }
+
+    public boolean equals(Furniture other)
+    {
+        // TODO: Fill this in
+        if (other == null){
+            return false;
+        }
+        
+        //Furniture f = (Furniture) other; no need to do casting here since the method gets "Furniture other" casting would be necessary if it was like Object other
+        return (other.getMaterial() == material && other.getCost() == cost);
+
+    }
+
+    // ignore the main method
+    public static void main(String[] args)
+    {
+        Furniture f = new Furniture("wood", 50);
+        Furniture f2 = new Furniture("ivory", 100);
+        Furniture f3 = new Furniture("wood", 50);
+        System.out.println("f equals f2? " + f.equals(f2));
+        System.out.println("f equals f3? " + f.equals(f3));
+    }
+}
+

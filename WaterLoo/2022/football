@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class football {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("number of players on the team: ");
+        int nrPlayers = scan.nextInt();
+        
+        ArrayList<Integer> scoreList = new ArrayList<Integer>();
+        ArrayList<Integer> foulList = new ArrayList<Integer>();
+        
+        for (int i = 0; i < nrPlayers*2; i++){ //get input for each players score and foul and store them in arraylists. 
+            if (i % 2 == 0){ //first line of input is score and second is foul for each player
+                System.out.print("score: ");
+                int score = scan.nextInt();
+                scoreList.add(score);
+            }
+            if (i % 2 != 0){
+                System.out.print("foul: ");
+                int foul = scan.nextInt();
+                foulList.add(foul);
+            }
+        }
+        
+        int goodPlayer = 0; //players with over 40 points
+        for (int i = 0; i < scoreList.size(); i++){
+            int playerScore = scoreList.get(i) * 5 - foulList.get(i) * 3;
+            if (playerScore >= 40){
+                goodPlayer++;
+            }
+            
+        }
+        
+        if (goodPlayer == nrPlayers){
+            System.out.println(goodPlayer+"+");
+        }
+        else{
+            System.out.println(goodPlayer);
+        }
+        
+    }
+}

@@ -1,4 +1,5 @@
 // modifying existing inherited methods
+// To override an inherited method, the method in the child class must have the same name, parameter list, and return type (or a subclass of the return type) as the parent method
 
 class Animal {
     public void makeSound() {
@@ -7,7 +8,7 @@ class Animal {
 }
 
 class Dog extends Animal {
-    @Override
+    @Override //not necessary
     public void makeSound() {
         System.out.println("dog barks");
     }

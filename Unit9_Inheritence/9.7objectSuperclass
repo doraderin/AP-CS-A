@@ -1,5 +1,5 @@
 //Object class is the superclass of all other classes in Java, the root class for all classes
-
+//If a parent class isn’t specified using the extends keyword, the class will inherit from the Object class (generally toString and equals)
 class Animal {
     private String name;
     private int age;
@@ -16,11 +16,12 @@ class Animal {
 
 class Main {
     public static void main(String[] args) {
-        Animal myAnimal = new Animal("Buddy", 3);
 
-        System.out.println(myAnimal.toString());
+        Animal a1 = new Animal("Buddy", 3);
 
-        String animalString = "my animal: " + myAnimal;
+        System.out.println(a1.toString());
+
+        String animalString = "my animal: " + a1;
         System.out.println(animalString);
     }
 }

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class cupcake {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("number of regular boxes: "); //takes input
+        int regular = scan.nextInt();
+        System.out.println("number of small boxes: ");
+        int small = scan.nextInt();
+        
+        int cupcakeNum = regular * 8 + small * 3; //total num of cupcakes
+        int leftOver = cupcakeNum - 28; //28 is the nr of students, we find amount of leftover cupcakes by substracting
+        
+        System.out.println(leftOver);
+        
+    }
+}

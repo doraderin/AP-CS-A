@@ -1,0 +1,60 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class harpTuning {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println(" "); 
+        String message = scan.nextLine();
+        
+        ArrayList<String> messageSeperated = new ArrayList<String>();
+        for (int i = 0; i < message.length(); i++){
+            String part = message.substring(i,i+1);
+            messageSeperated.add(part);
+        }
+        
+        //Only a limited num of leters and numbers are possible so i created Arrays to compare the digits in "message" to check if current digit is a string or int value (starting on line 22)
+        String[] letterList = {"A","B","C","D","E","F","G","H","I","J","K","K","M","N","O","P","R","S","T"};
+        String[] numberList = {"0","1","2","3","4","5","6","7","8","9"}; 
+        
+        boolean previousIsInt = false;
+        String te
+
+        for (int i = 0; i < messageSeperated.size(); i++){
+            boolean isString = false; //a change in instrction occurs whena string comes up right after a string so these values will be used to check when that happens
+            boolean isInt = false;
+            
+            if (messageSeperated.get(i).equals("-")){ //replaces - and + with loosen or tighent
+                messageSeperated.set(i," loosen ");
+            }
+            else if (messageSeperated.get(i).equals("+")){
+                messageSeperated.set(i," tighten ");
+            }
+            
+            for (String letter : letterList){ //goes through every letter A-T in array Letters to check if the current digit we are dealing with is a string
+                if (letter.equals(messageSeperated.get(i))){
+                    isString = true;
+                    break;
+                }
+            }
+            for (String num : numberList){ //goes through every number 0-9 in array numbers to check if the current digit we are dealing with is a int
+                if (num.equals(messageSeperated.get(i))){
+                    isInt = true;
+                    break;
+                }
+            }
+            
+            if (isString && previousIsInt) //intden bi sonraki sey string mi
+            {
+                //AFB tighten 8
+                System.out.println(sss+" "+messageSeperated+" ");
+            }
+
+            previousIsInt = isInt;
+        }
+        
+       
+    }
+}

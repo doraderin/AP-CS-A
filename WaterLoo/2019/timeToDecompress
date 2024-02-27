@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class timeToDecompress {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("number of lines in message: ");
+        int numberLines = scan.nextInt();
+        
+        for(int i = 0; i < numberLines; i++){
+            System.out.println("coded: ");
+            int digit = scan.nextInt();
+            String symbol = scan.next();
+            
+            for(int j = 0; j < digit; j++){
+                System.out.print("decoded: "+symbol);
+            }
+            System.out.println();
+        }
+    }
+}
+

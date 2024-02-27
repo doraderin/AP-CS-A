@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class winningScore {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("apple point shot: ");
+        int applePointShot = scan.nextInt();
+        System.out.println("apple field goal: ");
+        int appleFieldGoal = scan.nextInt();
+        System.out.println("apple free throw: ");
+        int applePointFreeThrow = scan.nextInt();
+        
+        System.out.println("banana point shot: ");
+        int bananaPointShot = scan.nextInt();
+        System.out.println("banana field goal: ");
+        int bananaFieldGoal = scan.nextInt();
+        System.out.println("banana free throw: ");
+        int bananaPointFreeThrow = scan.nextInt();
+        
+        int applePoints = applePointShot*3 + appleFieldGoal*2 + applePointFreeThrow;
+        int bananaPoints = bananaPointShot*3 + bananaFieldGoal*2 + bananaPointFreeThrow;
+        
+        if (applePoints > bananaPoints){
+            System.out.println("A");
+        }
+        if (applePoints < bananaPoints){
+            System.out.println("B");
+        }
+        else{
+            System.out.println("T");
+        }
+    }
+}

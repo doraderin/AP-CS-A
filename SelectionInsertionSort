@@ -1,0 +1,63 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("how many numbers you will enter: ");
+        int enterNum = s.nextInt();
+        
+        s.nextLine();
+        
+        ArrayList<Integer> numList = new ArrayList<Integer>();
+        
+        for (int i = 1; i <= enterNum; i++){
+            System.out.println("enter nr "+i+": ");
+            int num = s.nextInt();
+            numList.add(num);
+            s.nextLine();
+        }
+        
+        System.out.println("enter 'x' for selection sort enter 'y' for insertion sort: ");
+        String decision = s.nextLine();
+        
+        System.out.println("unsorted, original array: "+numList);
+        
+        if (decision.equals("x")){
+            int n = numList.size();
+
+            for (int i = 0; i < n - 1; i++) {
+                int minIndex = i;
+
+                for (int j = i + 1; j < n; j++) {
+                    if (numList.get(j) < numList.get(minIndex)) {
+                        minIndex = j;
+                    }
+                }
+                int temp = numList.get(minIndex);
+                numList.set(minIndex, numList.get(i));
+                numList.set(i, temp);
+                System.out.println("sorting: "+numList);
+            }
+            System.out.print("sorted array: "+numList);
+        }
+        else if (decision.equals("y")){
+            int temp = 0;
+    		
+    		for (int j = 0; j < numList.size(); j++) {
+    			for(int i = 0; i < numList.size()-1; i++){
+    				if (numList.get(i) > numList.get(i+1)) {
+    					temp = numList.get(i+1);
+    					numList.set(i+1, numList.get(i));
+    					numList.set(i, temp);
+    					System.out.println("sorting: "+numList);
+    				}
+    			}
+    		}
+    		System.out.println("sorted array: "+numList);
+        }
+        
+    }
+}
